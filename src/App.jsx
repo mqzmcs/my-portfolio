@@ -9,6 +9,7 @@ import AboutMePage from "./pages/AboutMePage/AboutMePage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage/SkillsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import Footer from "./components/Footer/Footer";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 import IsPrivate from "./components/IsPrivate/IsPrivate";
@@ -58,6 +59,7 @@ function App() {
           <ProjectsPage />
           <SkillsPage />
           <ContactPage />
+          <Footer />
 
           {/*
           <Routes>

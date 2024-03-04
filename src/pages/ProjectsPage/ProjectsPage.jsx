@@ -5,12 +5,17 @@ function ProjectsPage() {
         <>
             <div id="projects-page-top"></div>
             <div className="page-container projects-page-container">
+                <div className="ellipsis-container">
+                    <div className="ellipsis"></div>
+                    <div className="ellipsis"></div>
+                    <div className="ellipsis"></div>
+                </div>
                 <h3 className="page-title">Some of my work</h3>
                 <div className="projects-container">
                     <div className="project-item">
-                        <img className="project-item-image" src="./logo.png" alt="project image"></img>
+                        <img className="project-item-image" src="./billyb-index.png" alt="project image"></img>
                         <div className="project-text">
-                            <h2 className="project-item-title">Billy Biscuit</h2>
+                            <h2 className="project-item-title">Billy Biscuit: Cookie Collector</h2>
                             <p className="project-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum sunt corrupti quam in facilis vitae possimus ipsum minima enim fugit, consequatur illo autem reprehenderit numquam accusamus ut neque ipsam? Omnis.</p>
                             <p className="project-technologies">
                                 <span className="technologies-used">

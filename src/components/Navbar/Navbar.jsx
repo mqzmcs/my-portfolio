@@ -40,6 +40,11 @@ function Navbar() {
             PROJECTS
           </a>
           <a
+          className="nav-btn-skills"
+          href="#skills-page-top">
+            SKILLS
+          </a>
+          <a
           className="nav-btn-contact"
           href="#contact-page-top">
             CONTACT

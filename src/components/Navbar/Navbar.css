@@ -4,7 +4,7 @@
     right: 20px;
     font-size: 1.5em;
     color: white;
-    z-index: 1000;
+    z-index: 998;
 }
 
 .icon-nav-menu:hover {
@@ -24,13 +24,8 @@
 .nav-btn-home,
 .nav-btn-profile,
 .nav-btn-projects,
+.nav-btn-skills,
 .nav-btn-contact {
-    /*
-    appearance: none;
-    background: none;
-    text-decoration: none;
-    border-style: none;
-    */
     position: relative;
     margin-right: 2em;
     transform: rotate(-90deg);
@@ -46,25 +41,29 @@
 }
 
 .nav-btn-home {
-    top: 25%;
+    top: 20%;
 }
 
 .nav-btn-profile {
-    top: 50%;
+    top: 42%;
 }
 
 .nav-btn-projects {
-    top: 80%;
+    top: 67%;
+}
+
+.nav-btn-skills {
+    top: 87%;
 }
 
 .nav-btn-contact {
-    top: 107%;
+    top: 112%;
 }
 
 .nav-btn-home:hover,
 .nav-btn-profile:hover,
 .nav-btn-projects:hover,
+.nav-btn-skills:hover,
 .nav-btn-contact:hover {
-    font-size: 2rem;
     color: var(--bright-0);
 }

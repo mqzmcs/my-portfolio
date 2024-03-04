@@ -9,6 +9,7 @@ function HomePage() {
     title: true,
     profile: false,
     projects: false,
+    skills: false,
     contact: false,
     linkedin: false,
     github: false,
@@ -24,17 +25,18 @@ function HomePage() {
 
     if (type === "icon") {
       setFlashVisible(updatedFlashVisible);
-    } else if (type ==="nav") {
+    } else if (type === "nav") {
       setFlashVisible(updatedFlashVisible);
     }
   };
-  
+
   const handleOffHover = () => {
     setFlashVisible({
       ...flashVisible,
       title: true,
       profile: false,
       projects: false,
+      skills: false,
       contact: false,
       linkedin: false,
       github: false,
@@ -80,7 +82,7 @@ function HomePage() {
           rel="noopener noreferrer"
           href="https://ironhack.slack.com/team/U05UYMDAS2C">
           <FaSlack
-            className="icon-fa"handleHover
+            className="icon-fa" handleHover
             onMouseOver={() => handleHover("slack", "icon")}
             onMouseOut={handleOffHover}
           />
@@ -108,7 +110,11 @@ function HomePage() {
         </span>
         <span
           id="projects-flash"
-          style={{ visibility: flashVisible.projects ? "visible" : "hidden" }}><div id="flash-bar"></div> check out some of my work
+          style={{ visibility: flashVisible.projects ? "visible" : "hidden" }}><div id="flash-bar"></div> see some of my work
+        </span>
+        <span
+          id="skills-flash"
+          style={{ visibility: flashVisible.skills ? "visible" : "hidden" }}><div id="flash-bar"></div> check out what I use
         </span>
         <span
           id="contact-flash"
@@ -152,14 +158,15 @@ function HomePage() {
           </a>
         </div>
         <div
-          onMouseOver={() => handleHover("contact", "icon")}
+          onMouseOver={() => handleHover("skills", "icon")}
           onMouseOut={handleOffHover}>
-          <a href="#contact-page-top">
+          <a href="#skills-page-top">
             <span className="homepage-nav-text">
-              CONTACT
+              SKILLS
             </span>
           </a>
         </div>
+        <div id="dot"></div>
       </div>
 
     </div>

@@ -13,6 +13,7 @@ font-family: "Oswald", "Lexend Deca", "Lato", "Roboto", Arial, sans-serif;
   --font-stack-2: "Oswald", "Lexend Deca", "Lato", "Roboto", Arial, sans-serif;
   font-family: var(--font-stack-1);
   line-height: 1;
+  font-size: 16px;
   font-weight: 400;
   text-decoration: none;
 
@@ -23,12 +24,12 @@ font-family: "Oswald", "Lexend Deca", "Lato", "Roboto", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --dark-0: #080C00;
+  --dark-0: #080c00;
   --dark-1: #031740;
   --dark-2: #274873;
   --dark-3: #637AA6;
 
-  --light-0: #E0DDCF;
+  --light-0: #e0ddcf;
   --light-1: #F2E2CE;
 
   --bright-0: #F2C94C;
@@ -64,4 +65,36 @@ a {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+hr {
+  width: 95%;
+}
+
+#dot,
+.ellipsis {
+  background-color: var(--bright-0);
+  border-radius: 50%;
+}
+
+#dot {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 1%;
+  right: 10%;
+}
+
+.ellipsis {
+  width: 15px;
+  height: 15px;
+}
+
+.ellipsis-container {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
 }

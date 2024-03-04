@@ -5,6 +5,11 @@ function SkillsPage() {
         <>
             <div id="skills-page-top"></div>
             <div className="page-container skills-page-container">
+                <div className="ellipsis-container">
+                    <div className="ellipsis"></div>
+                    <div className="ellipsis"></div>
+                    <div className="ellipsis"></div>
+                </div>
                 <h3 className="page-title">Technologies I use</h3>
                 <div className="skills-container">
                     <div className="skill-item">

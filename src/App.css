@@ -13,24 +13,16 @@
   left: 100;
 }
 
-/*.access-btn-container,*/
 .my-name-container {
   padding: 0;
   margin: 1em;
   display: flex;
 }
 
-/*
-.access-btn-container {
-  justify-content: flex-end;
-}
-*/
-
 .my-name-container {
   justify-content: flex-start;
 }
 
-/*.access-btn,*/
 #my-name {
   position: fixed;
   appearance: none;
@@ -39,17 +31,6 @@
   padding: 5px;
   z-index: 1000;
 }
-
-/*
-.access-btn {
-  top: 5px;
-  right: 0;
-  border-style: none;
-  border-radius: 20%;
-  background-color: var(--color-1);
-  color: var(--color-6);
-}
-*/
 
 #my-name {
   top: 9px;
