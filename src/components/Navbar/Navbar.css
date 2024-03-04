@@ -1,0 +1,70 @@
+.icon-nav-menu {
+    position: fixed;
+    top: 14px;
+    right: 20px;
+    font-size: 1.5em;
+    color: white;
+    z-index: 1000;
+}
+
+.icon-nav-menu:hover {
+    transform: translateY(1px) translateX(-2px);
+    color: var(--bright-0);
+}
+
+.navbar-container {
+    position: fixed;
+    top: 5%;
+    right: 14px;
+    height: 50%;
+    width: 20px;
+    padding: 10px;
+}
+
+.nav-btn-home,
+.nav-btn-profile,
+.nav-btn-projects,
+.nav-btn-contact {
+    /*
+    appearance: none;
+    background: none;
+    text-decoration: none;
+    border-style: none;
+    */
+    position: relative;
+    margin-right: 2em;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: var(--font-stack-2);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-btn-home {
+    top: 25%;
+}
+
+.nav-btn-profile {
+    top: 50%;
+}
+
+.nav-btn-projects {
+    top: 80%;
+}
+
+.nav-btn-contact {
+    top: 107%;
+}
+
+.nav-btn-home:hover,
+.nav-btn-profile:hover,
+.nav-btn-projects:hover,
+.nav-btn-contact:hover {
+    font-size: 2rem;
+    color: var(--bright-0);
+}

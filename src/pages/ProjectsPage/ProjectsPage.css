@@ -1,0 +1,92 @@
+#projects-page-top {
+    height: 1px;
+    width: 1px;
+}
+
+.projects-page-container {
+    margin-top: 5%;
+}
+
+.projects-container {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 2em;
+}
+
+.project-item {
+    color: white;
+    border-radius: 20px;
+    padding: 2em;
+    box-sizing: content-box;
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.project-item:hover {
+    color: var(--dark-0);
+    background: var(--grad-1);
+    transform: translateX(1%) translateY(-1%);
+}
+
+.project-item-image {
+    width: 200px;
+    height: 200px;
+}
+
+.project-text {
+    margin-left: 2em;
+}
+
+.project-technologies {
+    line-height: 1.3em;
+}
+
+.technologies-used {
+    font-weight: 900;
+}
+
+.project-link {
+    max-width: 160px;
+    font-family: var(--font-stack-2);
+    color: var(--light-0);
+    font-size: 1.2em;
+    font-weight: 900;
+    line-height: 30px;
+    display: flex;
+}
+
+.project-text a {
+    display: none;
+}
+
+.project-item:hover
+.project-item-title {
+    font-size: 3em;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+.project-item:hover
+.project-item-description {
+    display: none;
+}
+
+.project-item:hover
+.project-technologies {
+    display: none;
+}
+
+
+.project-item:hover a {
+    display: block;
+}
+
+.project-link:hover {
+    font-size: 1.5em;
+    color: var(--bright-0);
+}

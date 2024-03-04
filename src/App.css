@@ -1,0 +1,72 @@
+.page-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  font-size: 2em;
+  color: var(--bright-0);
+  font-family: var(--font-stack-2);
+  left: 100;
+}
+
+/*.access-btn-container,*/
+.my-name-container {
+  padding: 0;
+  margin: 1em;
+  display: flex;
+}
+
+/*
+.access-btn-container {
+  justify-content: flex-end;
+}
+*/
+
+.my-name-container {
+  justify-content: flex-start;
+}
+
+/*.access-btn,*/
+#my-name {
+  position: fixed;
+  appearance: none;
+  background: none;
+  margin: 5px;
+  padding: 5px;
+  z-index: 1000;
+}
+
+/*
+.access-btn {
+  top: 5px;
+  right: 0;
+  border-style: none;
+  border-radius: 20%;
+  background-color: var(--color-1);
+  color: var(--color-6);
+}
+*/
+
+#my-name {
+  top: 9px;
+  left: 0;
+  padding: 0 1rem;
+  font-family: var(--font-stack-2);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
+}
+
+.top-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 3rem;
+  background-color: var(--dark-0);
+  z-index: 900;
+}

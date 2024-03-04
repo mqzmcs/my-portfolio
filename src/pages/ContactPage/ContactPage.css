@@ -1,0 +1,63 @@
+#contact-page-top {
+    height: 1px;
+    width: 1px;
+}
+
+.contact-page-container {
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+
+.contact-form {
+    box-sizing: content-box;
+    line-height: 2em;
+}
+
+.contact-fieldset {
+    padding: 2em;
+    border-radius: 20px;
+    color: var(--color-4);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.form-legend {
+    font-size: 1.2em;
+}
+
+#form-name,
+#form-email {
+    width: 40ch;
+}
+
+#form-name,
+#form-email,
+#form-message {
+    font-size: 1em;
+    font-family: var(--font-stack-1);
+    color: var(--dark-0);
+    background-color: #A4B2CB;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--dark-2);
+    font-size: 0.8em;
+}
+
+.submit-btn {
+    width: 10em;
+    font-family: var(--font-stack-2);
+    font-size: 1em;
+    background-color: var(--dark-2);
+    border-style: none;
+    border-radius: 20px;
+}
+
+.submit-btn:hover {
+    background-color: var(--bright-0);
+    color: var(--dark-1);
+    transform: translateY(-2px) translateX(5px);
+}
