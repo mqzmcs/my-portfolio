@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, useLocation, Link } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage/HomePage";
@@ -8,17 +7,12 @@ import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage/SkillsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import Footer from "./components/Footer/Footer";
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-
-import Loading from "./components/Loading/Loading";
+// import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+// import Loading from "./components/Loading/Loading";
 import TitleAnimation from "./components/TitleAnimation/TitleAnimation";
-
 import "./App.css";
 
 function App() {
-
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
   const [animationComplete, setAnimationComplete] = useState(false);
 
   useEffect(() => {
@@ -35,7 +29,6 @@ function App() {
         <>
           <Navbar />
           <div className="top-block"></div>
-
           <div className="my-name-container">
             <span id="my-name">
               AMARQUEZ

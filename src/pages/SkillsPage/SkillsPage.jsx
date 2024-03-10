@@ -1,6 +1,23 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./SkillsPage.css";
 
 function SkillsPage() {
+    const [skill, setSkill] = useState([]);
+
+    const getSkills = async () => {
+        try {
+            const response = await axios.get("http://localhost:5005/skillsPage");
+            setSkill(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    useEffect(() => {
+        getSkills();
+    }, []);
+
     return (
         <>
             <div id="skills-page-top"></div>
@@ -10,118 +27,20 @@ function SkillsPage() {
                     <div className="ellipsis"></div>
                     <div className="ellipsis"></div>
                 </div>
-                <h3 className="page-title">Technologies I use</h3>
+                <h3 className="page-title"></h3>
                 <div className="skills-container">
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            JavaScript
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            HTML
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            CSS
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            React
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            Node.js
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            MongoDB
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            GitHub
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            JavaScript
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            JavaScript
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            JavaScript
-                        </h4>
-                    </div>
-                    <div className="skill-item">
-                        <img
-                            className="skill-item-image"
-                            src="./logo.png"
-                            alt="technology logo">
-                        </img>
-                        <h4 className="skill-item-name">
-                            JavaScript
-                        </h4>
-                    </div>
+                    {skill.map((skill) => (
+                        <div
+                            className="skill-item"
+                            key={skill.id}>
+                            <img
+                                className="skill-item-image"
+                                src={skill.iconURL}
+                                alt={skill.iconAlt}
+                            />
+                            <h4 className="skill-item-name">{skill.name}</h4>
+                        </div>
+                    ))}
                 </div>
             </div>
         </>

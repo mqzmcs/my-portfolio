@@ -24,9 +24,11 @@
 }
 
 .skill-item {
-    padding: 2em;
     box-sizing: content-box;
-    max-width: 250px;
+    height: 10rem;
+    width: 10rem;
+    background: white;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,10 +36,12 @@
 }
 
 .skill-item-name {
+    margin: 0 auto;
     color: var(--dark-3);
 }
 
 .skill-item-image {
-    width: 80px;
-    height: auto;
+    margin: 0.5rem auto;
+    max-width: 70px;
+    max-height: 70px;
 }
