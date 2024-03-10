@@ -4,7 +4,6 @@ import { GrContact } from "react-icons/gr";
 import "./HomePage.css";
 
 function HomePage() {
-
   const [flashVisible, setFlashVisible] = useState({
     title: true,
     profile: false,
@@ -82,7 +81,7 @@ function HomePage() {
           rel="noopener noreferrer"
           href="https://ironhack.slack.com/team/U05UYMDAS2C">
           <FaSlack
-            className="icon-fa" handleHover
+            className="icon-fa"
             onMouseOver={() => handleHover("slack", "icon")}
             onMouseOut={handleOffHover}
           />
@@ -101,7 +100,7 @@ function HomePage() {
 
       <div>
         <span
-          id="title-flash" div
+          id="title-flash"
           style={{ visibility: flashVisible.title ? "visible" : "hidden" }}><div id="flash-bar"></div> web developer
         </span>
         <span

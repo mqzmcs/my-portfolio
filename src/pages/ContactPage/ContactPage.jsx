@@ -48,7 +48,7 @@ function ContactPage() {
                             Leave me a message, and I'll get back to you as soon as I can!
                         </legend>
                         <div className="form-style">
-                            <label for="form-name">Name</label>
+                            <label htmlFor="form-name">Name</label>
                             <br />
                             <input
                                 type="name"
@@ -59,17 +59,18 @@ function ContactPage() {
                             />
                         </div>
                         <div className="form-style">
-                            <label for="form-email">Email</label>
+                            <label htmlFor="form-email">Email</label>
                             <br />
                             <input
                                 type="email"
                                 id="form-email"
                                 name="sender-email"
                                 placeholder="Your Email"
-                                required />
+                                required
+                            />
                         </div>
                         <div className="form-style">
-                            <label for="form-message">Message</label>
+                            <label htmlFor="form-message">Message</label>
                             <br />
                             <textarea
                                 id="form-message"
@@ -77,7 +78,8 @@ function ContactPage() {
                                 rows="10"
                                 name="message"
                                 placeholder="Send me a message!"
-                                required>
+                                required
+                            >
                             </textarea>
                         </div>
                         <input
