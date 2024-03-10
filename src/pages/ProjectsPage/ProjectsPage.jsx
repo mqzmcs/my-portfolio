@@ -1,6 +1,23 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./ProjectsPage.css";
 
 function ProjectsPage() {
+    const [project, setProject] = useState([]);
+
+    const getProjects = async () => {
+        try {
+            const response = await axios.get("http://localhost:5005/projectsPage");
+            setProject(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    useEffect(() => {
+        getProjects();
+    }, []);
+
     return (
         <>
             <div id="projects-page-top"></div>
@@ -12,119 +29,46 @@ function ProjectsPage() {
                 </div>
                 <h3 className="page-title">Some of my work</h3>
                 <div className="projects-container">
-                    <div className="project-item">
-                        <img className="project-item-image" src="./billyb-index.png" alt="project image"></img>
-                        <div className="project-text">
-                            <h2 className="project-item-title">Billy Biscuit: Cookie Collector</h2>
-                            <p className="project-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum sunt corrupti quam in facilis vitae possimus ipsum minima enim fugit, consequatur illo autem reprehenderit numquam accusamus ut neque ipsam? Omnis.</p>
-                            <p className="project-technologies">
-                                <span className="technologies-used">
-                                    Technologies Used:
-                                </span>
-                                <br />
-                                JavaScript, HTML, CSS
-                            </p>
-                            <a className="project-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="#">
-                                Try it here
-                            </a>
-                            <a
-                                className="project-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="#">
-                                See it on GitHub
-                            </a>
+                    {project.map((project) => (
+                        <div
+                            className="project-item"
+                            key={project.id}>
+                            <img
+                                className="project-item-image"
+                                src={project.imageURL}
+                                alt={project.imageAlt}
+                            />
+                            <div className="project-text">
+                                <h2 className="project-item-title">{project.name}</h2>
+                                <p className="project-item-description">{project.description}</p>
+                                <div className="project-technologies-used">
+                                    {project.technologies.map((tech, index) => (
+                                        <img
+                                            className="project-tech-icon"
+                                            key={index}
+                                            src={tech}
+                                            alt={`Tech ${index + 1}`}
+                                        />
+                                    ))}
+                                </div>
+                                <a
+                                    className="project-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={project.clientRepoURL}>
+                                    GitHub Repo
+                                </a>
+                                <a className="project-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={project.liveURL}>
+                                    See it Live
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div className="project-item">
-                        <img className="project-item-image" src="./logo.png" alt="project image"></img>
-                        <div className="project-text">
-                            <h2 className="project-item-title">EXO App</h2>
-                            <p className="project-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum sunt corrupti quam in facilis vitae possimus ipsum minima enim fugit, consequatur illo autem reprehenderit numquam accusamus ut neque ipsam? Omnis.</p>
-                            <p className="project-technologies">
-                                <span className="technologies-used">
-                                    Technologies Used:
-                                </span>
-                                <br />
-                                JavaScript, HTML, CSS
-                            </p>
-                            <a
-                                className="project-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="#">
-                                Try it here
-                            </a>
-                            <a
-                                className="project-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="#">
-                                See it on GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div className="project-item">
-                        <img className="project-item-image" src="./logo.png" alt="project image"></img>
-                        <div className="project-text">
-                            <h2 className="project-item-title">Project L.U.I.S.</h2>
-                            <p className="project-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum sunt corrupti quam in facilis vitae possimus ipsum minima enim fugit, consequatur illo autem reprehenderit numquam accusamus ut neque ipsam? Omnis.</p>
-                            <p className="project-technologies">
-                                <span className="technologies-used">
-                                    Technologies Used:
-                                </span>
-                                <br />
-                                JavaScript, HTML, CSS
-                            </p>
-                            <a
-                                className="project-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="#">
-                                Try it here
-                            </a>
-                            <a
-                                className="project-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="#">
-                                See it on GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div className="project-item">
-                        <img className="project-item-image" src="./logo.png" alt="project image"></img>
-                        <div className="project-text">
-                            <h2 className="project-item-title">This Portfolio</h2>
-                            <p className="project-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum sunt corrupti quam in facilis vitae possimus ipsum minima enim fugit, consequatur illo autem reprehenderit numquam accusamus ut neque ipsam? Omnis.</p>
-                            <p className="project-technologies">
-                                <span className="technologies-used">
-                                    Technologies Used:
-                                </span>
-                                <br />
-                                JavaScript, HTML, CSS
-                            </p>
-                            <a
-                                className="project-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="#">
-                                Try it here
-                            </a>
-                            <a
-                                className="project-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="#">
-                                See it on GitHub
-                            </a>
-                        </div>
-                    </div>
+                    ))}
                 </div>
-            </div>
+            </div >
         </>
     );
 }

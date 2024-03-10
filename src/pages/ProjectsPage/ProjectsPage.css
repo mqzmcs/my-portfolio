@@ -27,27 +27,32 @@
     align-items: center;
 }
 
-.project-item:hover {
-    color: var(--dark-0);
-    background: var(--grad-1);
-    transform: translateX(1%) translateY(-1%);
-}
-
 .project-item-image {
     width: 300px;
     height: auto;
+    padding: 1rem;
+    margin-right: 2rem;
+    border: 1px solid var(--light-0);
+    border-radius: 20px;
 }
 
 .project-text {
     margin-left: 2em;
 }
 
-.project-technologies {
-    line-height: 1.3em;
+.project-technologies-used {
+    margin-top: 1.7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
 }
 
-.technologies-used {
-    font-weight: 900;
+.project-tech-icon {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    padding: 1rem 0;
 }
 
 .project-link {
@@ -65,28 +70,27 @@
 }
 
 .project-item:hover
+.project-item-image {
+    border-style: none;
+    width: 480px;
+}
+
+.project-item:hover {
+    color: var(--dark-0);
+    background: var(--grad-1);
+}
+
+.project-item:hover
 .project-item-title {
-    font-size: 3em;
-    padding-bottom: 1rem;
     margin: 0;
 }
 
-.project-item:hover
-.project-item-description {
-    display: none;
-}
-
-.project-item:hover
-.project-technologies {
-    display: none;
-}
-
-
 .project-item:hover a {
     display: block;
+    padding-top: 1rem;
 }
 
 .project-link:hover {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: var(--bright-0);
 }
