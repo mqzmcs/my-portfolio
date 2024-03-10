@@ -29,6 +29,9 @@ font-family: "Oswald", "Lexend Deca", "Lato", "Roboto", Arial, sans-serif;
   --dark-2: #274873;
   --dark-3: #637AA6;
 
+  --grey-0: #2F2F2F;
+  --grey-1: #D6D6D6;
+
   --light-0: #e0ddcf;
   --light-1: #F2E2CE;
 
@@ -88,6 +91,7 @@ hr {
 .ellipsis {
   width: 15px;
   height: 15px;
+  margin: 3rem 0;
 }
 
 .ellipsis-container {

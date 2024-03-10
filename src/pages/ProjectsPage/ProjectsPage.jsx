@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import "./ProjectsPage.css";
 
 function ProjectsPage() {
@@ -39,7 +40,7 @@ function ProjectsPage() {
                                 alt={project.imageAlt}
                             />
                             <div className="project-text">
-                                <h2 className="project-item-title">{project.name}</h2>
+                                <h2 className="project-text-title">{project.name}</h2>
                                 <p className="project-item-description">{project.description}</p>
                                 <div className="project-technologies-used">
                                     {project.technologies.map((tech, index) => (
@@ -51,19 +52,23 @@ function ProjectsPage() {
                                         />
                                     ))}
                                 </div>
-                                <a
-                                    className="project-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={project.clientRepoURL}>
-                                    GitHub Repo
-                                </a>
-                                <a className="project-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={project.liveURL}>
-                                    See it Live
-                                </a>
+                                <div className="project-links-container">
+                                    <a
+                                        className="project-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href={project.clientRepoURL}>
+                                        <FaExternalLinkSquareAlt id="link-icon" />
+                                        GitHub Repo
+                                    </a>
+                                    <a className="project-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href={project.liveURL}>
+                                        <FaExternalLinkSquareAlt id="link-icon" />
+                                        See it Live
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     ))}
