@@ -3,11 +3,8 @@
     width: 1px;
 }
 
-.projects-page-container {
-    padding-top: 5rem;
-}
-
 .projects-container {
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;

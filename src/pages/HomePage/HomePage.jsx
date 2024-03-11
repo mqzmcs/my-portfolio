@@ -148,15 +148,6 @@ function HomePage() {
           </a>
         </div>
         <div
-          onMouseOver={() => handleHover("projects", "icon")}
-          onMouseOut={handleOffHover}>
-          <a href="#projects-page-top">
-            <span className="homepage-nav-text">
-              PROJECTS
-            </span>
-          </a>
-        </div>
-        <div
           onMouseOver={() => handleHover("skills", "icon")}
           onMouseOut={handleOffHover}>
           <a href="#skills-page-top">
@@ -166,6 +157,15 @@ function HomePage() {
           </a>
         </div>
         <div id="dot"></div>
+        <div
+          onMouseOver={() => handleHover("projects", "icon")}
+          onMouseOut={handleOffHover}>
+          <a href="#projects-page-top">
+            <span className="homepage-nav-text">
+              PROJECTS
+            </span>
+          </a>
+        </div>
       </div>
 
     </div>

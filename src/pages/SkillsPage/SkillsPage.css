@@ -3,10 +3,6 @@
     width: 1px;
 }
 
-.skills-page-container {
-    padding-top: 5rem;
-}
-
 .skills-container {
     padding: 2em;
     display: flex;
@@ -32,6 +28,9 @@
 .skill-item-name {
     margin: 0 auto;
     color: var(--dark-3);
+    font-family: var(--font-stack-3);
+    font-weight: 800;
+    font-size: 1rem;
 }
 
 .skill-item-image {

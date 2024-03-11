@@ -27,7 +27,7 @@ function SkillsPage() {
                     <div className="ellipsis"></div>
                     <div className="ellipsis"></div>
                 </div>
-                <h3 className="page-title"></h3>
+                <h3 className="page-title skills-page-title">Technologies I use and other things along the way</h3>
                 <div className="skills-container">
                     {skill.map((skill) => (
                         <div

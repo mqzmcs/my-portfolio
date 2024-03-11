@@ -28,14 +28,14 @@ function Navbar() {
             PROFILE
           </a>
           <a
-          className="nav-btn-projects"
-          href="#projects-page-top">
-            PROJECTS
-          </a>
-          <a
           className="nav-btn-skills"
           href="#skills-page-top">
             SKILLS
+          </a>
+          <a
+          className="nav-btn-projects"
+          href="#projects-page-top">
+            PROJECTS
           </a>
           <a
           className="nav-btn-contact"

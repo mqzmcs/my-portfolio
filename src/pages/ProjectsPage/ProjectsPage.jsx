@@ -28,7 +28,7 @@ function ProjectsPage() {
                     <div className="ellipsis"></div>
                     <div className="ellipsis"></div>
                 </div>
-                <h3 className="page-title">Some of my work</h3>
+                <h3 className="page-title projects-page-title">Some of my work</h3>
                 <div className="projects-container">
                     {project.map((project) => (
                         <div

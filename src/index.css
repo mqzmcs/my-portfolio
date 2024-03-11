@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Madimi+One&family=Ojuju:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
-font-family: "Oswald", sans-serif;
-font-family: "Lexend Deca", sans-serif;
-font-family: "Lato", sans-serif;
-font-family: "Roboto", sans-serif;
+fonts: "Oswald", "Lexend Deca", "Lato", "Roboto", "Madimi One", "Josefin Sans", "Ojuju", "Montserrat"
+
 font-family: "Oswald", "Lexend Deca", "Lato", "Roboto", Arial, sans-serif;
 */
 
 :root {
-  --font-stack-1: "Lexend Deca", "Lato", "Roboto", Arial, sans-serif;
-  --font-stack-2: "Oswald", "Lexend Deca", "Lato", "Roboto", Arial, sans-serif;
+  --font-stack-1: "Montserrat", "Lexend Deca", Verdana;
+  --font-stack-2: "Oswald", Impact, Arial;
+  --font-stack-3: "Lato", "Roboto", Arial;
   font-family: var(--font-stack-1);
   line-height: 1;
   font-size: 16px;
@@ -84,14 +83,15 @@ hr {
   width: 25px;
   height: 25px;
   position: absolute;
-  bottom: 1%;
+  bottom: 35%;
   right: 10%;
 }
 
 .ellipsis {
   width: 15px;
   height: 15px;
-  margin: 3rem 0;
+  padding: 0;
+  margin: 5rem 0;
 }
 
 .ellipsis-container {

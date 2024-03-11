@@ -37,8 +37,8 @@ function App() {
 
           <HomePage />
           <AboutMePage />
-          <ProjectsPage />
           <SkillsPage />
+          <ProjectsPage />
           <ContactPage />
           <Footer />
 
