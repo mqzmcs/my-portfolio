@@ -2,23 +2,6 @@ import React, { useState } from "react";
 import "./AboutMePage.css";
 
 function AboutMePage() {
-    const [popupVisible, setPopupVisible] = useState(false);
-
-    const handlePopup = () => {
-        if (popupVisible === false) {
-            setPopupVisible(true);
-        }
-
-        if (popupVisible === true) {
-            setPopupVisible(false);
-
-            const element = document.getElementById("profile-page-top");
-
-            if (element) {
-                element.scrollIntoView({ behavior: "auto" });
-            }
-        }
-    };
 
     return (
         <>
@@ -58,17 +41,6 @@ function AboutMePage() {
                         </p>
                     </div>
                 </div>
-                <span className="popup-open-btn" onClick={handlePopup}>Details</span>
-                {popupVisible && (
-                    <div className="popup-overlay">
-                        <div className="popup-container">
-                            <div className="popup-inner">
-                                <span className="popup-close-btn" onClick={handlePopup}>Back</span>
-                                <h1>Test</h1>
-                            </div>
-                        </div>
-                    </div>
-                )}
             </div >
         </>
     );

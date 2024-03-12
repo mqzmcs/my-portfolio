@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Modal from '../../components/Modal/Modal';
 import "./ContactPage.css";
 
 function ContactPage() {
-    const formRef = useRef(null);
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const formRef = useRef(null);
 
     useEffect(() => {
         const scriptURL = process.env.REACT_APP_PORTFOLIO_CONTACT_FORM_SCRIPT_URL;
@@ -36,7 +37,7 @@ function ContactPage() {
                     <div className="ellipsis"></div>
                 </div>
                 <h3 className="page-title">Get in touch!</h3>
-
+                <Modal />
                 <form
                     className="contact-form"
                     method="post"
