@@ -88,6 +88,13 @@
     background: white;
 }
 
+.project-item:hover
+.project-tech-name {
+    background: var(--bright-0);
+    border-color: var(--grey-1);
+    color: var(--dark-0);
+}
+
 .project-link:hover {
     color: var(--bright-1);
     transform: translateX(2%) translateY(2%);

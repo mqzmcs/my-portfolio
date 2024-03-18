@@ -4,6 +4,7 @@ import "./AboutMePage.css";
 
 function AboutMePage() {
     const [content, setContent] = useState({ topContent: [], bottomContent: [] });
+    const [doc, setDoc] = useState([]);
 
     const getContent = async () => {
         try {
@@ -14,8 +15,18 @@ function AboutMePage() {
         }
     };
 
+    const getDoc = async () => {
+        try {
+            const response = await axios.get("http://localhost:5005/myDocs");
+            setDoc(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     useEffect(() => {
         getContent();
+        getDoc();
     }, []);
 
     return (
@@ -51,6 +62,20 @@ function AboutMePage() {
                         </div>
                     )
                     )}
+                </div>
+                <div className="personal-docs-container">
+                    {doc.map((item) => (
+                        <a
+                            key={item.id}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={item.docURL}
+                        >
+                            <div className="personal-doc-item">
+                                {item.name}
+                            </div>
+                        </a>
+                    ))}
                 </div>
                 <div className="about-me-container-bottom">
                     {content.bottomContent.map((item) => item.type === "paragraph" ? (

@@ -5,7 +5,7 @@ import "./SkillsPage.css";
 function SkillsPage() {
     const [skill, setSkill] = useState([]);
 
-    const getSkills = async () => {
+    const getSkill = async () => {
         try {
             const response = await axios.get("http://localhost:5005/skillsPage");
             setSkill(response.data);
@@ -15,7 +15,7 @@ function SkillsPage() {
     };
 
     useEffect(() => {
-        getSkills();
+        getSkill();
     }, []);
 
     return (
@@ -27,7 +27,7 @@ function SkillsPage() {
                     <div className="ellipsis"></div>
                     <div className="ellipsis"></div>
                 </div>
-                <h3 className="page-title skills-page-title">Technologies and tools I use, and other things along the way</h3>
+                <h3 className="page-title skills-page-title">Technologies, tools and other things I use</h3>
                 <div className="skills-container">
                     {Array.isArray(skill) && skill.map((item) => (
                         <div key={item.id} className="skill-item">

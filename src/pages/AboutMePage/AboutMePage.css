@@ -8,9 +8,9 @@
 }
 
 .about-me-headline {
-    margin: 7rem 0 0 0;
-    color: var(--light-1);
+    margin: 5rem 0 2rem 0;
     font-size: 2rem;
+    color: var(--light-1);
 }
 
 .profile-image-container,
@@ -32,6 +32,7 @@
 
 .about-me-container-bottom {
     padding-top: 5rem;
+    margin-bottom: 1rem;
 }
 
 #profile-image-top,
@@ -48,4 +49,36 @@
 .about-me-body-text {
     line-height: 1.5;
     font-weight: 350;
+}
+
+.personal-docs-container {
+    margin-top: 5rem;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal-doc-item {
+    height: 35px;
+    width: 165px;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--dark-0);
+    border-radius: 2px;
+    background: var(--grey-0);
+    color: var(--dark-3);
+    font-weight: 600;
+    line-height: 1.2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal-doc-item:hover {
+    background: var(--bright-0);
+    border-color: var(--grey-1);
+    color: var(--dark-0);
 }
