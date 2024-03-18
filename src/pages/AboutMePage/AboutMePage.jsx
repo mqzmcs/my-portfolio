@@ -30,7 +30,7 @@ function AboutMePage() {
                     {content.topContent.map((item) => item.type === "image" ? (
                         <div
                             key={item.id}
-                            className="profile-image-container-top">
+                            className="profile-image-container">
                             <img
                                 id="profile-image-top"
                                 src={item.imageURL}
@@ -41,11 +41,13 @@ function AboutMePage() {
                         <div
                             key={item.id}
                             className="about-me-content-container-top">
-                            <p
-                                key={item.id}
-                                className="about-me-body-text">
-                                {item.content}
-                            </p>
+                            {item.content.split(/\s{4}/).map((section, index) =>
+                                <p
+                                    key={index}
+                                    className="about-me-body-text">
+                                    {section}
+                                </p>
+                            )}
                         </div>
                     )
                     )}
@@ -55,16 +57,18 @@ function AboutMePage() {
                         <div
                             key={item.id}
                             className="about-me-content-container-bottom">
-                            <p
-                                key={item.id}
-                                className="about-me-body-text">
-                                {item.content}
-                            </p>
+                            {item.content.split(/\s{4}/).map((section, index) =>
+                                <p
+                                    key={index}
+                                    className="about-me-body-text">
+                                    {section}
+                                </p>
+                            )}
                         </div>
                     ) : (
                         <div
                             key={item.id}
-                            className="profile-image-container-bottom">
+                            className="profile-image-container">
                             <img
                                 id="profile-image-bottom"
                                 src={item.imageURL}
