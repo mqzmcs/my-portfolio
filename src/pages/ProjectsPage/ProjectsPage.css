@@ -15,7 +15,7 @@
 .project-item {
     color: var(--dark-0);
     background: var(--grey-1);
-    padding: 2em;
+    padding: 2rem;
     box-sizing: content-box;
     width: 95%;
     display: flex;
@@ -26,16 +26,16 @@
     width: 500px;
     height: auto;
     padding: 1rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .project-text {
-    margin-left: 2em;
+    margin: 0 1rem 0 2rem;
 }
 
 .project-text-title {
     font-size: 2rem;
-    margin: 0;
+    margin: 0 0 1.2rem 0;
 }
 
 .project-item-description {
@@ -44,19 +44,21 @@
 }
 
 .project-technologies-used {
-    margin-top: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 5%;
     flex-wrap: wrap;
-    border-radius: 20px;
+    gap: 3%;
 }
 
-.project-tech-icon {
-    max-width: 2.5rem;
-    max-height: 2.5rem;
-    padding-bottom: 1rem;
+.project-tech-name {
+    color: var(--dark-3);
+    font-weight: 800;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--dark-3);
+    background: var(--grey-1);
+    border-radius: 25px;
 }
 
 .project-links-container {
@@ -65,7 +67,6 @@
     justify-content: flex-start;
     align-items: center;
     gap: 2%;
-
 }
 
 #link-icon {
@@ -75,12 +76,12 @@
 }
 
 .project-link {
-    max-width: 160px;
     font-family: var(--font-stack-2);
     color: var(--dark-0);
     font-size: 1.2em;
     font-weight: 900;
-    line-height: 30px;
+    margin-top: 2rem;
+    padding-right: 2rem;
 }
 
 .project-item:hover {

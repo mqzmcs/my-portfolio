@@ -29,16 +29,15 @@ function SkillsPage() {
                 </div>
                 <h3 className="page-title skills-page-title">Technologies and tools I use, and other things along the way</h3>
                 <div className="skills-container">
-                    {skill.map((skill) => (
-                        <div
-                            className="skill-item"
-                            key={skill.id}>
-                            <img
-                                className="skill-item-image"
-                                src={skill.iconURL}
-                                alt={skill.iconAlt}
-                            />
-                            <h4 className="skill-item-name">{skill.name}</h4>
+                    {Array.isArray(skill) && skill.map((item) => (
+                        <div key={item.id} className="skill-item">
+                            {item.content.map((section, index) => 
+                                <div
+                                    key={index}
+                                    className="skill-item-block">
+                                    {section}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>

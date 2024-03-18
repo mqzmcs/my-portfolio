@@ -25,16 +25,10 @@
     justify-content: center;
 }
 
-.skill-item-name {
+.skill-item-block {
     margin: 0 auto;
     color: var(--dark-3);
     font-family: var(--font-stack-3);
     font-weight: 800;
-    font-size: 1rem;
-}
-
-.skill-item-image {
-    margin: 0.5rem auto;
-    max-width: 120px;
-    max-height: 120px;
+    font-size: 1.2rem;
 }
