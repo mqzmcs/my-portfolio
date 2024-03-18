@@ -28,15 +28,19 @@ function AboutMePage() {
                 </h1>
                 <div className="about-me-container-top">
                     {content.topContent.map((item) => item.type === "image" ? (
-                        <div className="profile-image-container-top">
+                        <div
+                            key={item.id}
+                            className="profile-image-container-top">
                             <img
-                                key={item.id}
                                 id="profile-image-top"
                                 src={item.imageURL}
-                                alt={item.id} />
+                                alt="profile image one of two"
+                            />
                         </div>
                     ) : (
-                        <div className="about-me-content-container-top">
+                        <div
+                            key={item.id}
+                            className="about-me-content-container-top">
                             <p
                                 key={item.id}
                                 className="about-me-body-text">
@@ -48,7 +52,9 @@ function AboutMePage() {
                 </div>
                 <div className="about-me-container-bottom">
                     {content.bottomContent.map((item) => item.type === "paragraph" ? (
-                        <div className="about-me-content-container-bottom">
+                        <div
+                            key={item.id}
+                            className="about-me-content-container-bottom">
                             <p
                                 key={item.id}
                                 className="about-me-body-text">
@@ -56,12 +62,14 @@ function AboutMePage() {
                             </p>
                         </div>
                     ) : (
-                        <div className="profile-image-container-bottom">
+                        <div
+                            key={item.id}
+                            className="profile-image-container-bottom">
                             <img
-                                key={item.id}
                                 id="profile-image-bottom"
                                 src={item.imageURL}
-                                alt={item.id} />
+                                alt="profile image two of two"
+                            />
                         </div>
                     )
                     )}
