@@ -87,7 +87,7 @@ function HomePage() {
         </a>
       </div>
 
-      <div>
+      <div className="flash-container">
         <span
           id="title-flash"
           style={{ visibility: flashVisible.title ? "visible" : "hidden" }}><div id="flash-bar"></div> web developer

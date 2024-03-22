@@ -17,7 +17,7 @@
     background: var(--grey-1);
     padding: 2rem;
     box-sizing: content-box;
-    width: 95%;
+    width: 85vw;
     display: flex;
     align-items: center;
 }
@@ -99,4 +99,26 @@
 .project-link:hover {
     color: var(--bright-1);
     transform: translateX(2%) translateY(2%);
+}
+
+@media screen and (max-width: 1024px) {
+    .project-item {
+        flex-wrap: wrap;
+    }
+
+    .project-item-image {
+        margin: 0 auto;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .project-item {
+        width: 80vw;
+    }
+
+    .project-item-image {
+        margin: 0 auto;
+        width: 350px;
+    } 
 }

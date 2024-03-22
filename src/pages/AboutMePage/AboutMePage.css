@@ -8,9 +8,6 @@
 }
 
 .about-me-headline {
-    position: absolute;
-    top: 6%;
-    left: 50%;
     margin: 5rem 0 2rem 0;
     font-size: 1.5rem;
     color: var(--light-1);
@@ -25,12 +22,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .about-me-content-container-top,
 .about-me-content-container-bottom {
     margin: 0 2rem;
-    flex-direction: column;;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .about-me-container-top {
@@ -88,4 +87,24 @@
     background: var(--bright-0);
     border-color: var(--grey-1);
     color: var(--dark-0);
+}
+
+@media screen and (max-width: 1024px) {
+    .profile-image-container,
+    .about-me-container-top,
+    .about-me-content-container-top,
+    .about-me-container-bottom,
+    .about-me-content-container-bottom {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .personal-docs-container {
+        flex-wrap: wrap;
+    }
+
+    #profile-image-bottom {
+        margin-top: 2rem;
+    }
 }

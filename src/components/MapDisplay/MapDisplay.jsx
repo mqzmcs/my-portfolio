@@ -1,3 +1,5 @@
+import "./MapDisplay.css";
+
 function MapDisplay() {
 
     return (

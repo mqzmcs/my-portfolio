@@ -13,7 +13,7 @@
 }
 
 .contact-container {
-    width: 80%;
+    width: 90vw;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
@@ -25,11 +25,13 @@
 
 .contact-btn {
     padding: 0.5rem 2rem;
+    width: 100px;
     border: 1px solid var(--dark-0);
     border-radius: 2px;
     background: var(--grey-0);
     color: var(--dark-3);
     font-size: 1rem;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -37,5 +39,16 @@
     background: var(--bright-0);
     border-color: var(--grey-1);
     color: var(--dark-0);
-    font-weight: 650;
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contact-page-display {
+        flex-wrap: wrap;
+    }
 }

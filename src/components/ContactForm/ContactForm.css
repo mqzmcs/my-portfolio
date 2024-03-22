@@ -19,12 +19,12 @@
 }
 
 #form-name,
-#form-email {
+#form-email,
+#form-message {
     width: 60ch;
 }
 
 #form-message {
-    width: 60ch;
     height: 10ch;
     line-height: 1.3rem;
 }
@@ -57,4 +57,20 @@ textarea::placeholder {
     background-color: var(--bright-0);
     color: var(--dark-0);
     transform: translateY(-1px) translateX(2px);
+}
+
+@media screen and (max-width: 1024px) {
+    #form-name,
+    #form-email,
+    #form-message {
+        width: 50ch;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #form-name,
+    #form-email,
+    #form-message {
+        width: 30ch;
+    }
 }

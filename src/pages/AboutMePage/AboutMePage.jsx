@@ -34,9 +34,6 @@ function AboutMePage() {
             <div id="profile-page-top"></div>
             <div className="page-container profile-page-container">
                 <hr />
-                <h1 className="about-me-headline">
-                    Hi! I'm Alfonso, and I like developing stuff!
-                </h1>
                 <div className="about-me-container-top">
                     {content.topContent.map((item) => item.type === "image" ? (
                         <div
@@ -49,16 +46,19 @@ function AboutMePage() {
                             />
                         </div>
                     ) : (
-                        <div
-                            key={item.id}
-                            className="about-me-content-container-top">
-                            {item.content.split(/\s{4}/).map((section, index) =>
-                                <p
-                                    key={index}
-                                    className="about-me-body-text">
-                                    {section}
-                                </p>
-                            )}
+                        <div className="about-me-content-container-top">
+                            <h1 className="about-me-headline">
+                                Hi! I'm Alfonso, and I craft digital solutions!
+                            </h1>
+                            <div key={item.id}>
+                                {item.content.split(/\s{4}/).map((section, index) =>
+                                    <p
+                                        key={index}
+                                        className="about-me-body-text">
+                                        {section}
+                                    </p>
+                                )}
+                            </div>
                         </div>
                     )
                     )}
