@@ -35,7 +35,7 @@ function AboutMePage() {
             <div className="page-container profile-page-container">
                 <hr />
                 <h1 className="about-me-headline">
-                    Hi! I'm Alfonso and welcome to my portfolio!
+                    Hi! I'm Alfonso, and I like developing stuff!
                 </h1>
                 <div className="about-me-container-top">
                     {content.topContent.map((item) => item.type === "image" ? (

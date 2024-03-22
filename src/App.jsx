@@ -7,8 +7,8 @@ import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import SkillsPage from "./pages/SkillsPage/SkillsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import Footer from "./components/Footer/Footer";
-// import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import TitleAnimation from "./components/TitleAnimation/TitleAnimation";
+//import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "./App.css";
 
 function App() {
@@ -49,6 +49,7 @@ function App() {
         <TitleAnimation />
       )
       }
+
     </div>
   );
 }
