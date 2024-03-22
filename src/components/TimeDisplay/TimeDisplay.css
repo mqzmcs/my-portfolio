@@ -1,0 +1,41 @@
+.time-display-container {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.time-label,
+.time-face {
+    width: 100px;
+    height: 30px;
+}
+
+.time-label {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.time-label-text {
+    position: relative;
+    top: 10%;
+    font-family: var(--font-stack-2);
+    font-size: 1.4rem;
+}
+
+.time-face {
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    background: white;
+    color: var(--dark-0);
+}
+
+.time-face-text {
+    margin: 0 auto;
+    padding: 0 auto;
+    position: relative;
+    top: 15%;
+    left: 4%;
+    font-size: 1.3rem;
+    font-family: monospace;
+    font-weight: 650;
+}

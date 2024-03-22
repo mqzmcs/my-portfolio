@@ -4,13 +4,13 @@
 }
 
 .skills-container {
-    padding: 2em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2em;
+    padding-bottom: 2rem;
 }
 
 .skill-item {
@@ -26,7 +26,6 @@
 }
 
 .skill-item-block {
-    margin: 0 auto;
     color: var(--dark-3);
     font-family: var(--font-stack-3);
     font-weight: 800;

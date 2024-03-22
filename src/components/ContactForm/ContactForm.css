@@ -1,25 +1,32 @@
 .contact-form {
     box-sizing: content-box;
-    line-height: 2em;
+    width: 70vw;
+    padding: 1rem;
 }
 
 .contact-fieldset {
-    padding: 2em;
-    border-radius: 20px;
-    color: white;
+    border-style: none;
+    line-height: 2em;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
     gap: 0.5em;
+
 }
 
-.form-legend {
-    font-size: 1.2em;
+.form-section {
+    margin: 0 auto;
 }
 
 #form-name,
 #form-email {
-    width: 40ch;
+    width: 60ch;
+}
+
+#form-message {
+    width: 60ch;
+    height: 10ch;
+    line-height: 1.3rem;
 }
 
 #form-name,
@@ -38,12 +45,13 @@ textarea::placeholder {
 }
 
 .submit-btn {
+    margin: 0 auto;
     width: 10em;
     font-family: var(--font-stack-2);
     font-size: 1em;
     background-color: var(--dark-2);
     border-style: none;
-    border-radius: 20px;
+    border-radius: 2px;
 }
 
 .submit-btn:hover {

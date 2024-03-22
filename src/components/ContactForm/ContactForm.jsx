@@ -46,10 +46,7 @@ function ContactForm() {
                 name="contact-form"
             >
                 <fieldset className="contact-fieldset">
-                    <legend className="form-legend">
-                        Leave me a message, and I'll get back to you as soon as I can!
-                    </legend>
-                    <div className="form-style">
+                    <div className="form-section">
                         <label htmlFor="form-name">Name</label>
                         <br />
                         <input
@@ -60,7 +57,7 @@ function ContactForm() {
                             required
                         />
                     </div>
-                    <div className="form-style">
+                    <div className="form-section">
                         <label htmlFor="form-email">Email</label>
                         <br />
                         <input
@@ -71,13 +68,11 @@ function ContactForm() {
                             required
                         />
                     </div>
-                    <div className="form-style">
+                    <div className="form-section">
                         <label htmlFor="form-message">Message</label>
                         <br />
                         <textarea
                             id="form-message"
-                            cols="80"
-                            rows="10"
                             name="message"
                             placeholder="Send me a message!"
                             required

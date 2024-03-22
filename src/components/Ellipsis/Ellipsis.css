@@ -5,11 +5,11 @@
     align-items: center;
     justify-content: center;
     gap: 15%;
+    margin: 5rem 0;
   }
   
   .ellipsis {
     width: 15px;
     height: 15px;
     padding: 0;
-    margin: 5rem 0;
   }

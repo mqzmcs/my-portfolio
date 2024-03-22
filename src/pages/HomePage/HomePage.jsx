@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaDiscord, FaSlack } from "react-icons/fa";
-import { GrContact } from "react-icons/gr";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiDiscord } from "react-icons/si";
+import { GrMail } from "react-icons/gr";
 import "./HomePage.css";
 
 function HomePage() {
@@ -12,7 +13,6 @@ function HomePage() {
     contact: false,
     linkedin: false,
     github: false,
-    slack: false,
     discord: false,
   });
 
@@ -39,7 +39,6 @@ function HomePage() {
       contact: false,
       linkedin: false,
       github: false,
-      slack: false,
       discord: false,
     });
   };
@@ -50,7 +49,7 @@ function HomePage() {
       <div className="icon-fa-container">
         <a
           href="#contact-page-top">
-          <GrContact
+          <GrMail
             className="icon-fa"
             onMouseOver={() => handleHover("contact", "icon")}
             onMouseOut={handleOffHover}
@@ -79,18 +78,8 @@ function HomePage() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://ironhack.slack.com/team/U05UYMDAS2C">
-          <FaSlack
-            className="icon-fa"
-            onMouseOver={() => handleHover("slack", "icon")}
-            onMouseOut={handleOffHover}
-          />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
           href="https://discordapp.com/users/635626418688229395">
-          <FaDiscord
+          <SiDiscord
             className="icon-fa"
             onMouseOver={() => handleHover("discord", "icon")}
             onMouseOut={handleOffHover}
@@ -126,10 +115,6 @@ function HomePage() {
         <span
           id="github-flash"
           style={{ visibility: flashVisible.github ? "visible" : "hidden" }}><div id="flash-bar"></div> work with me on GitHub
-        </span>
-        <span
-          id="slack-flash"
-          style={{ visibility: flashVisible.slack ? "visible" : "hidden" }}><div id="flash-bar"></div> chat with me on Slack
         </span>
         <span
           id="discord-flash"

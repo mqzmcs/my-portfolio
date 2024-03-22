@@ -1,4 +1,22 @@
-test
+# COPYRIGHT materials
+
+- [LinkedIn branding policies](https://brand.linkedin.com/policies)
+- [GitHub Logos and Usage](https://github.com/logos)
+- [Discord's Branding Guidelines](https://discord.com/branding)
+
+- [Bootstrap's Brand Guidelines](https://getbootstrap.com/docs/5.3/about/brand/)
+
+- [MongoDB's Brand Resources](https://www.mongodb.com/company/newsroom/brand-resources)
+- [MongoDB's Trademark Usage Guidelines](https://www.mongodb.com/legal/trademark-usage-guidelines)
+
+- [Node.js's Trademark Policy](https://www.mongodb.com/legal/trademark-usage-guidelines)
+
+
+
+- [?] React
+- [?] Express.js
+- [x] Slack
+
 
 # Getting Started with Create React App
 
