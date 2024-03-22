@@ -6,28 +6,21 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import "./ContactPage.css";
 
 function ContactPage() {
-    const [dropForm, setDropForm] = useState(false);
+    const [dropForm, setDropForm] = useState(true);
     const [dropMap, setDropMap] = useState(false);
+    const [dropBtn, setDropBtn] = useState("My Location");
 
-    const handleDropForm = () => {
-        if (dropForm === false || dropMap === true) {
-            setDropForm(true);
-            setDropMap(false);
-        }
-
-        if (dropForm === true) {
+    const handleDrop = () => {
+        if (dropForm === true && dropMap === false && dropBtn === "My Location") {
             setDropForm(false);
-        }
-    };
-
-    const handleDropMap = () => {
-        if (dropMap === false || dropForm === true) {
             setDropMap(true);
-            setDropForm(false);
+            setDropBtn("Message Me")
         }
 
-        if (dropMap === true) {
+        if (dropMap === true && dropForm === false && dropBtn === "Message Me") {
             setDropMap(false);
+            setDropForm(true);
+            setDropBtn("My Location")
         }
     };
 
@@ -36,49 +29,44 @@ function ContactPage() {
             <div id="contact-page-top"></div>
             <div className="page-container contact-page-container">
                 <Ellipsis />
-                <h3 className="page-title contact-page-title">Get in touch</h3>
+                <h3 className="page-title contact-page-title">Get in touch!</h3>
                 {dropForm && (
                     <div className="contact-page-display">
                         <ContactForm />
                     </div>
                 )}
                 {dropMap && (
-                    <div className="contact-page-display">
+                    <div className="contact-page-display contact-location-display">
                         <TimeDisplay />
                         <MapDisplay />
                     </div>
                 )}
                 <div className="contact-container">
                     <a
-                        className="contact-btn"
+                        className="contact-btn btns"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://www.linkedin.com/in/amlm-marquez">
                         <div>LinkedIn</div>
                     </a>
                     <a
-                        className="contact-btn"
+                        className="contact-btn btns"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://github.com/mqzmcs">
                         <div>GitHub</div>
                     </a>
                     <a
-                        className="contact-btn"
+                        className="contact-btn btns"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://discordapp.com/users/635626418688229395">
                         <div>Discord</div>
                     </a>
                     <div
-                        className="contact-btn"
-                        onClick={handleDropForm}>
-                        Message Me
-                    </div>
-                    <div
-                        className="contact-btn"
-                        onClick={handleDropMap}>
-                        My Location
+                        className="contact-btn btns"
+                        onClick={handleDrop}>
+                        {dropBtn}
                     </div>
                 </div>
             </div>

@@ -11,9 +11,9 @@
 .page-title {
   color: white;
   font-family: var(--font-stack-1);
-  font-size: 2.2em;
+  font-size: 2.2rem;
   font-weight: 250;
-  padding: 2rem 0;
+  padding: 0 0 5rem 0;
   margin: 0;
 }
 
@@ -54,4 +54,19 @@
   height: 3rem;
   background-color: var(--dark-0);
   z-index: 900;
+}
+
+.btns {
+  border: 1px solid var(--dark-0);
+  background: var(--bright-0);
+  color: var(--dark-0);
+  font-weight: 500;
+  text-align: center;
+}
+
+.btns:hover {
+  border-color: white;
+  background: var(--dark-0);
+  color: white;
+  font-weight: 550;
 }

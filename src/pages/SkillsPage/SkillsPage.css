@@ -31,3 +31,12 @@
     font-weight: 800;
     font-size: 1.2rem;
 }
+
+.skill-item:hover{
+    background: var(--bright-0);
+}
+
+.skill-item:hover
+.skill-item-block {
+    color: var(--dark-0);
+}

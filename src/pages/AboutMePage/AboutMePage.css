@@ -7,10 +7,20 @@
     color: white;
 }
 
-.about-me-headline {
+.about-me-headline-top,
+.about-me-headline-bottom {
+    color: white;
+    font-family: var(--font-stack-1);
+    font-size: 2.2rem;
+    font-weight: 250;
+}
+
+.about-me-headline-top {
     margin: 5rem 0 2rem 0;
-    font-size: 1.5rem;
-    color: var(--light-1);
+}
+
+.about-me-headline-bottom {
+    margin: 2rem 0 5rem 0;
 }
 
 .profile-image-container,
@@ -43,8 +53,9 @@
 
 #profile-image-top,
 #profile-image-bottom {
-    margin: 0 2rem;
-    height: auto;
+    margin: 0 1rem;
+    width: 420px;
+    height: 420px;
     max-width: 75%;
 }
 
@@ -53,12 +64,12 @@
 }
 
 .about-me-body-text {
-    line-height: 1.5;
+    line-height: 2;
     font-weight: 350;
 }
 
 .personal-docs-container {
-    margin-top: 5rem;
+    margin: 7rem 0 5rem 0;
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -69,24 +80,13 @@
 .personal-doc-item {
     height: 35px;
     width: 165px;
-    margin: 1rem;
+    margin: 0 1.5rem 0 1.5rem;
     padding: 1rem;
-    border: 1px solid var(--dark-0);
-    border-radius: 2px;
-    background: var(--grey-0);
-    color: var(--dark-3);
-    font-weight: 600;
+    border-radius: 25px;
     line-height: 1.2rem;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.personal-doc-item:hover {
-    background: var(--bright-0);
-    border-color: var(--grey-1);
-    color: var(--dark-0);
 }
 
 @media screen and (max-width: 1024px) {

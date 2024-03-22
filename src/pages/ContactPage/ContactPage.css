@@ -4,17 +4,24 @@
 }
 
 .contact-page-display {
-    margin-bottom: 2rem;
+    width: 80vw;
+    height: 400px;
+    margin: 0 0 3rem 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
 }
 
+.contact-location-display {
+    display: flex;
+    justify-content: center;
+}
+
 .contact-container {
     width: 90vw;
-    margin-bottom: 2rem;
+    margin: 2rem 0 10rem 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -25,20 +32,10 @@
 
 .contact-btn {
     padding: 0.5rem 2rem;
-    width: 100px;
-    border: 1px solid var(--dark-0);
-    border-radius: 2px;
-    background: var(--grey-0);
-    color: var(--dark-3);
+    width: 120px;
+    border-radius: 15px;
     font-size: 1rem;
-    text-align: center;
     cursor: pointer;
-}
-
-.contact-btn:hover {
-    background: var(--bright-0);
-    border-color: var(--grey-1);
-    color: var(--dark-0);
 }
 
 @media screen and (max-width: 1024px) {

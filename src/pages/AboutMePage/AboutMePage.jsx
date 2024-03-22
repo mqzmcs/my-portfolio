@@ -47,8 +47,8 @@ function AboutMePage() {
                         </div>
                     ) : (
                         <div className="about-me-content-container-top">
-                            <h1 className="about-me-headline">
-                                Hi! I'm Alfonso, and I craft digital solutions!
+                            <h1 className="about-me-headline-top">
+                                Hi! I'm Alfonso, and I love developing stuff !
                             </h1>
                             <div key={item.id}>
                                 {item.content.split(/\s{4}/).map((section, index) =>
@@ -71,7 +71,7 @@ function AboutMePage() {
                             rel="noopener noreferrer"
                             href={item.docURL}
                         >
-                            <div className="personal-doc-item">
+                            <div className="personal-doc-item btns">
                                 {item.name}
                             </div>
                         </a>
@@ -79,16 +79,20 @@ function AboutMePage() {
                 </div>
                 <div className="about-me-container-bottom">
                     {content.bottomContent.map((item) => item.type === "paragraph" ? (
-                        <div
-                            key={item.id}
-                            className="about-me-content-container-bottom">
-                            {item.content.split(/\s{4}/).map((section, index) =>
-                                <p
-                                    key={index}
-                                    className="about-me-body-text">
-                                    {section}
-                                </p>
-                            )}
+                        <div className="about-me-content-container-bottom">
+                            <h1 className="about-me-headline-bottom">
+                                ...and creating digital solutions !
+                            </h1>
+                            <div
+                                key={item.id}>
+                                {item.content.split(/\s{4}/).map((section, index) =>
+                                    <p
+                                        key={index}
+                                        className="about-me-body-text">
+                                        {section}
+                                    </p>
+                                )}
+                            </div>
                         </div>
                     ) : (
                         <div
