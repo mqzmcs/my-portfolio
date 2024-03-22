@@ -86,19 +86,3 @@ hr {
   bottom: 35%;
   right: 10%;
 }
-
-.ellipsis {
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  margin: 5rem 0;
-}
-
-.ellipsis-container {
-  width: 200px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 15%;
-}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
+import Ellipsis from "../../components/Ellipsis/Ellipsis";
 import "./ProjectsPage.css";
 
 function ProjectsPage() {
@@ -23,11 +24,7 @@ function ProjectsPage() {
         <>
             <div id="projects-page-top"></div>
             <div className="page-container projects-page-container">
-                <div className="ellipsis-container">
-                    <div className="ellipsis"></div>
-                    <div className="ellipsis"></div>
-                    <div className="ellipsis"></div>
-                </div>
+                <Ellipsis />
                 <h3 className="page-title projects-page-title">Some of my work</h3>
                 <div className="projects-container">
                     {project.map((project) => (
@@ -47,7 +44,7 @@ function ProjectsPage() {
                                         <div
                                             className="project-tech-name"
                                             key={index}>
-                                        {tech}
+                                            {tech}
                                         </div>
                                     ))}
                                 </div>

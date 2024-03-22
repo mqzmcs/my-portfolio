@@ -2,3 +2,11 @@
     height: 1px;
     width: 1px;
 }
+
+#drop-btn {
+    background: var(--bright-0);
+    color: var(--dark-0);
+    font-size: 2rem;
+    margin: 5rem 0;
+    cursor: pointer;
+}

@@ -1,9 +1,13 @@
+import "./Footer.css";
+
 function Footer() {
     return (
-        <div className="footer-container">
+        <>
             <hr />
-            <p>This is footer</p>
-        </div>
+            <div className="footer-container">
+                2024 Alfonso Marquez
+            </div>
+        </>
     )
 }
 
