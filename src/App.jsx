@@ -8,7 +8,6 @@ import SkillsPage from "./pages/SkillsPage/SkillsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import Footer from "./components/Footer/Footer";
 // import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-// import Loading from "./components/Loading/Loading";
 import TitleAnimation from "./components/TitleAnimation/TitleAnimation";
 import "./App.css";
 
@@ -27,7 +26,9 @@ function App() {
     <div className="App">
       {animationComplete ? (
         <>
+
           <Navbar />
+
           <div className="top-block"></div>
           <div className="my-name-container">
             <span id="my-name">
@@ -43,6 +44,7 @@ function App() {
           <Footer />
 
         </>
+
       ) : (
         <TitleAnimation />
       )
