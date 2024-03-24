@@ -70,3 +70,9 @@
   color: white;
   font-weight: 550;
 }
+
+@media screen and (max-width: 476px) {
+  #my-name {
+    display: none;
+  }
+}

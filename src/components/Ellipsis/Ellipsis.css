@@ -13,3 +13,9 @@
     height: 15px;
     padding: 0;
   }
+
+@media screen and (max-width: 767px) {
+  .ellipsis-container {
+    margin: 5rem 0;
+  }
+}

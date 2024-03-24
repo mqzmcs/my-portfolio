@@ -48,7 +48,7 @@ function AboutMePage() {
                     ) : (
                         <div className="about-me-content-container-top">
                             <h1 className="about-me-headline-top">
-                                Hi! I'm Alfonso, and I love developing stuff !
+                                Hi! I'm Alfonso, and I love developing stuff!
                             </h1>
                             <div key={item.id}>
                                 {item.content.split(/\s{4}/).map((section, index) =>
@@ -81,7 +81,7 @@ function AboutMePage() {
                     {content.bottomContent.map((item) => item.type === "paragraph" ? (
                         <div className="about-me-content-container-bottom">
                             <h1 className="about-me-headline-bottom">
-                                ...and creating digital solutions !
+                                ...and creating digital solutions!
                             </h1>
                             <div
                                 key={item.id}>

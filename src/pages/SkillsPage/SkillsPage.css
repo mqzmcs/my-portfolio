@@ -40,3 +40,20 @@
 .skill-item-block {
     color: var(--dark-0);
 }
+
+@media screen and (max-width: 575px) {
+    .skills-container {
+        gap: 0.5rem;
+    }
+
+    .skill-item {
+        border-radius: 0;
+        height: 7rem;
+        width: 8rem;
+    }
+
+    .skill-item-block {
+        font-weight: 650;
+        font-size: 1rem;
+    }
+}

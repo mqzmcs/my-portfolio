@@ -112,6 +112,12 @@
     }
 }
 
+@media screen and (max-width: 660px) {
+    .project-item-image {
+        width: 50vw;
+    }
+}
+
 @media screen and (max-width: 575px) {
     .project-item {
         width: 80vw;
@@ -119,12 +125,6 @@
 
     .project-item-image {
         margin: 0 auto;
-        width: 350px;
+        width: 80%;
     } 
-}
-
-@media screen and (max-width: 400px) {
-    .project-item-image {
-        width: 50vw;
-    }
 }

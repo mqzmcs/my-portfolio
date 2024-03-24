@@ -9,3 +9,9 @@
         width: 420px;
     }
 }
+
+@media screen and (max-width: 456px) {
+    .map-frame {
+        width: 250px;
+    }
+}

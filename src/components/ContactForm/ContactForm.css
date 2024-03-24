@@ -2,6 +2,7 @@
     box-sizing: content-box;
     width: 70vw;
     padding: 1rem;
+    margin: 0 auto;
 }
 
 .contact-fieldset {

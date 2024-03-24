@@ -90,6 +90,7 @@
 }
 
 @media screen and (max-width: 1024px) {
+
     .profile-image-container,
     .about-me-container-top,
     .about-me-content-container-top,
@@ -104,7 +105,29 @@
         flex-wrap: wrap;
     }
 
+    #profile-image-top,
+    #profile-image-bottom {
+        width: 250px;
+        height: 250px;
+    }
+
+    .personal-docs-container {
+        margin-bottom: 0;
+    }
+
+    .about-me-headline-bottom {
+        margin-bottom: 2rem;
+    }
+}
     #profile-image-bottom {
         margin-top: 2rem;
     }
-}
+
+
+    @media screen and (max-width: 461px) {
+        #profile-image-top,
+        #profile-image-bottom {
+            width: 200px;
+            height: 200px;
+        }
+    }
