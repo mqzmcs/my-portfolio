@@ -35,6 +35,10 @@ function AboutMePage() {
         }
     }, [backendAPI]);
 
+    console.log("IMAGE", image);
+    console.log("PARA", paragraph);
+    console.log("DOC", doc);
+
     useEffect(() => {
         getImage();
         getParagraph();
