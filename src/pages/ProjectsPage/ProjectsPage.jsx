@@ -6,9 +6,10 @@ import "./ProjectsPage.css";
 
 function ProjectsPage() {
     const [project, setProject] = useState([]);
+    const [isDataFetched, setIsDataFetched] = useState(false);
     const backendAPI = process.env.REACT_APP_BACKEND_API;
 
-    const getProjects = useCallback(async () => {
+    const fetchProjects = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}/projects`);
             setProject(response.data);
@@ -18,8 +19,11 @@ function ProjectsPage() {
     }, [backendAPI]);
 
     useEffect(() => {
-        getProjects();
-    }, [getProjects]);
+        if (!isDataFetched) {
+            fetchProjects();
+            setIsDataFetched(true);
+        }
+    }, [isDataFetched, fetchProjects]);
 
     return (
         <>

@@ -3,7 +3,7 @@ import "./Footer.css";
 function Footer() {
     return (
         <>
-            <hr />
+            <div className="hr-bar"></div>
             <div className="footer-container">
                 2024 Alfonso Marquez
             </div>

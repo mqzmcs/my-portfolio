@@ -1,13 +1,14 @@
 import { useState, useCallback, useEffect } from "react";
 import axios from "axios";
-import "./SkillsPage.css";
 import Ellipsis from "../../components/Ellipsis/Ellipsis";
+import "./SkillsPage.css";
 
 function SkillsPage() {
     const [skill, setSkill] = useState([]);
+    const [isDataFetched, setIsDataFetched] = useState(false);
     const backendAPI = process.env.REACT_APP_BACKEND_API;
 
-    const getSkill = useCallback(async () => {
+    const fetchSkill = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}/skills`);
             setSkill(response.data);
@@ -17,8 +18,11 @@ function SkillsPage() {
     }, [backendAPI]);
 
     useEffect(() => {
-        getSkill();
-    }, [getSkill]);
+        if (!isDataFetched) {
+            fetchSkill();
+            setIsDataFetched(true);
+        }
+    }, [isDataFetched, fetchSkill]);
 
     return (
         <>

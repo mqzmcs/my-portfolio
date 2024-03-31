@@ -35,6 +35,10 @@ function ContactForm() {
         };
     }, [formRef, setFormSent]);
 
+    const handleFormRest = () => {
+        setFormSent(false);
+    };
+
     return (
         <>
             {!formSent ? (
@@ -87,8 +91,18 @@ function ContactForm() {
                     </fieldset>
                 </form>
             ) : (
-                <div
-                    className="form-sent-message">Thank you! Your message has been sent.
+                <div className="form-sent-message">
+                    <span>Thank you! Your message has been sent.</span>
+                    <div>
+                        {formSent && (
+                            <button
+                                className="submit-btn"
+                                onClick={handleFormRest}
+                            >
+                                Send Another
+                            </button>
+                        )}
+                    </div>
                 </div>
             )}
             {loading && <Loading />}

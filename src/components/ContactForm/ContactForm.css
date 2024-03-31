@@ -12,7 +12,6 @@
     flex-direction: column;
     justify-content: center;
     gap: 1.5em;
-
 }
 
 .form-section {
@@ -54,12 +53,23 @@ textarea::placeholder {
     font-weight: 700;
     font-family: var(--font-stack-1);
     color: white;
-
 }
 
 .submit-btn:hover {
     background-color: var(--bright-0);
     color: var(--dark-0);
+}
+
+.form-sent-message {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+.form-sent-message div {
+    margin: 2rem;
+    display: flex;
 }
 
 @media screen and (max-width: 1024px) {

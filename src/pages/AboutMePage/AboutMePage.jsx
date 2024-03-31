@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 import axios from "axios";
 import "./AboutMePage.css";
 
@@ -9,13 +9,10 @@ function AboutMePage() {
     const [isDataFetched, setIsDataFetched] = useState(false);
     const backendAPI = process.env.REACT_APP_BACKEND_API;
 
-    console.log("API", backendAPI);
-
     const fetchImage = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}images`);
             setImage(response.data);
-            console.log("IMAGE RESPONSE", response);
         } catch (error) {
             console.log(error);
         }
@@ -25,7 +22,6 @@ function AboutMePage() {
         try {
             const response = await axios.get(`${backendAPI}profile`);
             setParagraph(response.data);
-            console.log("PARA RESPONSE", response);
         } catch (error) {
             console.log(error);
         }
@@ -35,15 +31,10 @@ function AboutMePage() {
         try {
             const response = await axios.get(`${backendAPI}docs`);
             setDoc(response.data);
-            console.log("DOC RESPONSE", response);
         } catch (error) {
             console.log(error);
         }
     }, [backendAPI]);
-
-    console.log("setImage", image);
-    console.log("setParagraph", paragraph);
-    console.log("setDoc", doc);
 
     useEffect(() => {
         if (!isDataFetched) {
@@ -58,7 +49,7 @@ function AboutMePage() {
         <>
             <div id="profile-page-top"></div>
             <div className="page-container profile-page-container">
-                <div id="hr-bar"></div>
+                <div className="hr-bar"></div>
 
                 <div className="about-me-container-top">
                     {Array.isArray(image) && image.map((img) => {

@@ -80,6 +80,14 @@ hr {
   right: 10%;
 }
 
+.hr-bar {
+  height: 1px;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
 @media screen and (max-width: 767px) {
   #dot {
     width: 20px;
