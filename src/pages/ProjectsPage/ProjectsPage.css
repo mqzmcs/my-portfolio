@@ -23,10 +23,9 @@
 }
 
 .project-item-image {
-    width: 500px;
+    width: 40%;
     height: auto;
-    padding: 1rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
 .project-text {
@@ -105,16 +104,14 @@
     .project-item {
         flex-wrap: wrap;
     }
-
     .project-item-image {
+        width: 75%;
+        padding: 0 0 2rem 1rem;
         margin: 0 auto;
-        padding: 2rem;
     }
-}
-
-@media screen and (max-width: 660px) {
-    .project-item-image {
-        width: 50vw;
+    .project-text-title {
+        margin-top: 1.5rem;
+        text-align: center;
     }
 }
 
@@ -122,9 +119,4 @@
     .project-item {
         width: 80vw;
     }
-
-    .project-item-image {
-        margin: 0 auto;
-        width: 80%;
-    } 
 }

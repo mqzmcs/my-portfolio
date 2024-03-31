@@ -19,10 +19,6 @@
     margin: 5rem 0 2rem 0;
 }
 
-.about-me-headline-bottom {
-    margin: 2rem 0 5rem 0;
-}
-
 .profile-image-container,
 .about-me-container-top,
 .about-me-content-container-top,
@@ -35,6 +31,10 @@
     flex-wrap: nowrap;
 }
 
+.about-me-container-bottom {
+    margin: 2rem;
+}
+
 .about-me-content-container-top,
 .about-me-content-container-bottom {
     margin: 0 2rem;
@@ -42,25 +42,19 @@
     align-items: flex-start;
 }
 
-.about-me-container-top {
-    margin-top: 5rem;
-}
-
-.about-me-container-bottom {
-    padding-top: 5rem;
-    margin-bottom: 1rem;
-}
-
 #profile-image-top,
 #profile-image-bottom {
     margin: 0 1rem;
-    width: 420px;
-    height: 420px;
-    max-width: 75%;
+    width: 80%;
+    height: 80%;
 }
 
 #profile-image-top {
     border-radius: 50%;
+}
+
+#profile-image-bottom {
+    margin-top: 1rem;
 }
 
 .about-me-body-text {
@@ -69,7 +63,7 @@
 }
 
 .personal-docs-container {
-    margin: 7rem 0 5rem 0;
+    margin: 8rem 8rem 4rem 8rem;
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -80,9 +74,9 @@
 .personal-doc-item {
     height: 35px;
     width: 165px;
-    margin: 0 1.5rem 0 1.5rem;
-    padding: 1rem;
-    border-radius: 25px;
+    margin: 0 1.2rem 0 1.2rem;
+    padding: 1.5rem;
+    border-radius: 22px;
     line-height: 1.2rem;
     display: flex;
     align-items: center;
@@ -98,17 +92,38 @@
     .about-me-content-container-bottom {
         flex-wrap: wrap;
     }
+
+    #profile-image-top,
+    #profile-image-bottom {
+        height: 50%;
+        width: 50%;
+    }
+
+    #profile-image-top {
+        margin-top: 7rem;
+    }
+
+    #profile-image-bottom {
+        margin-top: 3rem;
+    }
+
+    .personal-docs-container {
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .personal-doc-item {
+        margin: 0 0.5rem 0 0.5rem;
+    }
+
+    .about-me-container-bottom {
+        margin: 3rem 0 0 0;
+    }
 }
 
 @media screen and (max-width: 767px) {
     .personal-docs-container {
         flex-wrap: wrap;
-    }
-
-    #profile-image-top,
-    #profile-image-bottom {
-        width: 250px;
-        height: 250px;
     }
 
     .personal-docs-container {
@@ -118,16 +133,10 @@
     .about-me-headline-bottom {
         margin-bottom: 2rem;
     }
-}
+
+    #profile-image-top,
     #profile-image-bottom {
-        margin-top: 2rem;
+        height: 70%;
+        width: 70%;
     }
-
-
-    @media screen and (max-width: 461px) {
-        #profile-image-top,
-        #profile-image-bottom {
-            width: 200px;
-            height: 200px;
-        }
-    }
+}
