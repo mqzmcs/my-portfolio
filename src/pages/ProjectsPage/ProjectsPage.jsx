@@ -28,7 +28,7 @@ function ProjectsPage() {
                 <Ellipsis />
                 <h3 className="page-title projects-page-title">Some of my work</h3>
                 <div className="projects-container">
-                    {project.map((project) => (
+                    {Array.isArray(project) && project.map((project) => (
                         <div
                             className="project-item"
                             key={project.id}>
