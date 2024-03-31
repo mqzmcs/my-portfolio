@@ -3,14 +3,24 @@ import axios from "axios";
 import "./AboutMePage.css";
 
 function AboutMePage() {
-    const [content, setContent] = useState([]);
+    const [image, setImage] = useState([]);
+    const [paragraph, setParagraph] = useState([]);
     const [doc, setDoc] = useState([]);
     const backendAPI = process.env.REACT_APP_BACKEND_API;
 
-    const getContent = useCallback(async () => {
+    const getImage = useCallback(async () => {
+        try {
+            const response = await axios.get(`${backendAPI}images`);
+            setImage(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }, [backendAPI]);
+
+    const getParagraph = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}profile`);
-            setContent(response.data);
+            setParagraph(response.data);
         } catch (error) {
             console.log(error);
         }
@@ -26,9 +36,10 @@ function AboutMePage() {
     }, [backendAPI]);
 
     useEffect(() => {
-        getContent();
+        getImage();
+        getParagraph();
         getDoc();
-    }, [getContent, getDoc]);
+    }, [getImage, getParagraph, getDoc]);
 
     return (
         <>
@@ -37,40 +48,41 @@ function AboutMePage() {
                 <div id="hr-bar"></div>
 
                 <div className="about-me-container-top">
-                    {content
-                        .filter((item) => item.type === "image" && item.id === "image01")
-                        .map((item) => (
-                            <div key={item.id} className="profile-image-container">
-                                <img
-                                    id="profile-image-top"
-                                    src={item.imageURL}
-                                    alt=""
-                                />
-                            </div>
-                        ))
-                    }
+                    {image.map((image) => {
+                        if (image.id === "image01") {
+                            return (
+                                <div
+                                    key={image.id}
+                                    className="profile-image-container"
+                                >
+                                    <img
+                                        id="profile-image-top"
+                                        src={image.imageURL}
+                                        alt={image.imageAlt}
+                                    />
+                                </div>
+                            );
+                        } else {
+                            return null;
+                        }
+                    })}
                     <div className="about-me-content-container-top">
                         <h1 className="about-me-headline-top">
                             Hi! I'm Alfonso, and I love developing stuff!
                         </h1>
-                        {content
-                            .filter((item) => item.type === "paragraph" && item.id === "paragraph01")
-                            .map((item) => (
-                                <div key={item.id}>
-                                    <p className="about-me-body-text">
-                                        {item.paragraph01}
-                                    </p>
-                                </div>
-                            ))
-                            .filter((item) => item.type === "paragraph" && item.id === "paragraph02")
-                            .map((item) => (
-                                <div key={item.id}>
-                                    <p className="about-me-body-text">
-                                        {item.paragraph02}
-                                    </p>
-                                </div>
-                            ))
-                        }
+                        {paragraph.map((paragraph) => {
+                            if (paragraph.id !== "paragraph03") {
+                                return (
+                                    <div key={paragraph.id}>
+                                        <p className="about-me-body-text">
+                                            {paragraph.content}
+                                        </p>
+                                    </div>
+                                );
+                            } else {
+                                return null;
+                            }
+                        })}
                     </div>
                 </div>
 
@@ -88,37 +100,45 @@ function AboutMePage() {
                         </a>
                     ))}
                 </div>
-                {/*                <div className="about-me-container-bottom">
-                    {content.bottomContent.map((item) => item.type === "paragraph" ? (
-                        <div className="about-me-content-container-bottom">
-                            <h1 className="about-me-headline-bottom">
-                                ...and creating digital solutions!
-                            </h1>
-                            <div
-                                key={item.id}>
-                                {item.content.split(/\s{4}/).map((section, index) =>
-                                    <p
-                                        key={item.id + "-" + index}
-                                        className="about-me-body-text">
-                                        {section}
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                    ) : (
-                        <div
-                            key={item.id}
-                            className="profile-image-container">
-                            <img
-                                key={item.id}
-                                id="profile-image-bottom"
-                                src={item.imageURL}
-                                alt=""
-                            />
-                        </div>
-                    )
-                    )}
-                    </div> */}
+
+                <div className="about-me-container-bottom">
+                    <div className="about-me-content-container-bottom">
+                        <h1 className="about-me-headline-bottom">
+                            ...and creating digital solutions!
+                        </h1>
+                        {paragraph.map((paragraph) => {
+                            if (paragraph.id === "paragraph03") {
+                                return (
+                                    <div key={paragraph.id}>
+                                        <p className="about-me-body-text">
+                                            {paragraph.content}
+                                        </p>
+                                    </div>
+                                );
+                            } else {
+                                return null;
+                            }
+                        })}
+                    </div>
+                    {image.map((image) => {
+                        if (image.id === "image02") {
+                            return (
+                                <div
+                                    key={image.id}
+                                    className="profile-image-container"
+                                >
+                                    <img
+                                        id="profile-image-bottom"
+                                        src={image.imageURL}
+                                        alt={image.imageAlt}
+                                    />
+                                </div>
+                            );
+                        } else {
+                            return null;
+                        }
+                    })}
+                </div>
             </div>
         </>
     );
