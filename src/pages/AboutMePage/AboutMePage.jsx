@@ -108,7 +108,7 @@ function AboutMePage() {
                 <div className="about-me-container-bottom">
                     <div className="about-me-content-container-bottom">
                         <h1 className="about-me-headline-bottom">
-                            ...and creating digital solutions!
+                            And creating digital solutions!
                         </h1>
                         {Array.isArray(paragraph) && paragraph.map((para) => {
                             if (para.id === "paragraph03") {

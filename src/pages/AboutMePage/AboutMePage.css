@@ -1,5 +1,5 @@
 #profile-page-top {
-    height: 1px;
+    height: 2rem;
     width: 1px;
 }
 
@@ -81,6 +81,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (min-width: 1661px) {
+    #profile-image-top {
+        margin-top: 5rem;
+    }
 }
 
 @media screen and (max-width: 1024px) {
