@@ -1,35 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import axios from "axios";
 import "./AboutMePage.css";
 
 function AboutMePage() {
     const [content, setContent] = useState([]);
     const [doc, setDoc] = useState([]);
-
     const backendAPI = process.env.REACT_APP_BACKEND_API;
 
-    const getContent = async () => {
+    const getContent = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}profile`);
             setContent(response.data);
         } catch (error) {
             console.log(error);
         }
-    };
+    }, [backendAPI]);
 
-    const getDoc = async () => {
+    const getDoc = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}docs`);
             setDoc(response.data);
         } catch (error) {
             console.log(error);
         }
-    };
+    }, [backendAPI]);
 
     useEffect(() => {
         getContent();
         getDoc();
-    }, []);
+    }, [getContent, getDoc]);
 
     return (
         <>

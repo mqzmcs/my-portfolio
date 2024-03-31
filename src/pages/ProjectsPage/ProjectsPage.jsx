@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 import axios from "axios";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import Ellipsis from "../../components/Ellipsis/Ellipsis";
@@ -6,21 +6,20 @@ import "./ProjectsPage.css";
 
 function ProjectsPage() {
     const [project, setProject] = useState([]);
-
     const backendAPI = process.env.REACT_APP_BACKEND_API;
 
-    const getProjects = async () => {
+    const getProjects = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}/projects`);
             setProject(response.data);
         } catch (error) {
             console.log(error);
         }
-    };
+    }, [backendAPI]);
 
     useEffect(() => {
         getProjects();
-    }, []);
+    }, [getProjects]);
 
     return (
         <>
