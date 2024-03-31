@@ -48,7 +48,7 @@ function AboutMePage() {
                 <div id="hr-bar"></div>
 
                 <div className="about-me-container-top">
-                    {image.map((img) => {
+                    {Array.isArray(image) && image.map((img) => {
                         if (img.id === "image01") {
                             return (
                                 <div
@@ -70,7 +70,7 @@ function AboutMePage() {
                         <h1 className="about-me-headline-top">
                             Hi! I'm Alfonso, and I love developing stuff!
                         </h1>
-                        {paragraph.map((para) => {
+                        {Array.isArray(paragraph) && paragraph.map((para) => {
                             if (para.id !== "paragraph03") {
                                 return (
                                     <div key={para.id}>
@@ -87,7 +87,7 @@ function AboutMePage() {
                 </div>
 
                 <div className="personal-docs-container">
-                    {doc.map((item) => (
+                    {Array.isArray(doc) && doc.map((item) => (
                         <a
                             key={item.id}
                             target="_blank"
@@ -106,7 +106,7 @@ function AboutMePage() {
                         <h1 className="about-me-headline-bottom">
                             ...and creating digital solutions!
                         </h1>
-                        {paragraph.map((para) => {
+                        {Array.isArray(paragraph) && paragraph.map((para) => {
                             if (para.id === "paragraph03") {
                                 return (
                                     <div key={para.id}>
@@ -120,7 +120,7 @@ function AboutMePage() {
                             }
                         })}
                     </div>
-                    {image.map((img) => {
+                    {Array.isArray(image) && image.map((img) => {
                         if (img.id === "image02") {
                             return (
                                 <div
