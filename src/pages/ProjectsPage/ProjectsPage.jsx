@@ -60,7 +60,7 @@ function ProjectsPage() {
                                         rel="noopener noreferrer"
                                         href={project.clientRepoURL}>
                                         <FaExternalLinkSquareAlt id="link-icon" />
-                                        GitHub Repo
+                                        More Information
                                     </a>
                                     <a className="project-link"
                                         target="_blank"
