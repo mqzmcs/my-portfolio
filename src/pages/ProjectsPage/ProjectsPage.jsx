@@ -7,9 +7,11 @@ import "./ProjectsPage.css";
 function ProjectsPage() {
     const [project, setProject] = useState([]);
 
+    const backendAPI = process.env.REACT_APP_BACKEND_API;
+
     const getProjects = async () => {
         try {
-            const response = await axios.get("http://localhost:5005/projectsPage");
+            const response = await axios.get(`${backendAPI}/projects`);
             setProject(response.data);
         } catch (error) {
             console.log(error);

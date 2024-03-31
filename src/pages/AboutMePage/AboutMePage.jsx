@@ -6,9 +6,11 @@ function AboutMePage() {
     const [content, setContent] = useState([]);
     const [doc, setDoc] = useState([]);
 
+    const backendAPI = process.env.REACT_APP_BACKEND_API;
+
     const getContent = async () => {
         try {
-            const response = await axios.get("http://localhost:5005/profilePage");
+            const response = await axios.get(`${backendAPI}profile`);
             setContent(response.data);
         } catch (error) {
             console.log(error);
@@ -17,7 +19,7 @@ function AboutMePage() {
 
     const getDoc = async () => {
         try {
-            const response = await axios.get("http://localhost:5005/myDocs");
+            const response = await axios.get(`${backendAPI}docs`);
             setDoc(response.data);
         } catch (error) {
             console.log(error);

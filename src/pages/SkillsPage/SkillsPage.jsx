@@ -6,9 +6,11 @@ import Ellipsis from "../../components/Ellipsis/Ellipsis";
 function SkillsPage() {
     const [skill, setSkill] = useState([]);
 
+    const backendAPI = process.env.REACT_APP_BACKEND_API;
+
     const getSkill = async () => {
         try {
-            const response = await axios.get("http://localhost:5005/skillsPage");
+            const response = await axios.get(`${backendAPI}/skills`);
             setSkill(response.data);
         } catch (error) {
             console.log(error);
