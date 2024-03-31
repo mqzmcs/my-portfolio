@@ -3,7 +3,7 @@ import axios from "axios";
 import "./AboutMePage.css";
 
 function AboutMePage() {
-    const [content, setContent] = useState({ topContent: [], bottomContent: [] });
+    const [content, setContent] = useState([]);
     const [doc, setDoc] = useState([]);
 
     const getContent = async () => {
@@ -33,36 +33,46 @@ function AboutMePage() {
         <>
             <div id="profile-page-top"></div>
             <div className="page-container profile-page-container">
-                <hr />
+                <div id="hr-bar"></div>
+
                 <div className="about-me-container-top">
-                    {content.topContent.map((item) => item.type === "image" ? (
-                        <div
-                            key={item.id}
-                            className="profile-image-container">
-                            <img
-                                id="profile-image-top"
-                                src={item.imageURL}
-                                alt="profile image one of two"
-                            />
-                        </div>
-                    ) : (
-                        <div className="about-me-content-container-top">
-                            <h1 className="about-me-headline-top">
-                                Hi! I'm Alfonso, and I love developing stuff!
-                            </h1>
-                            <div key={item.id}>
-                                {item.content.split(/\s{4}/).map((section, index) =>
-                                    <p
-                                        key={index}
-                                        className="about-me-body-text">
-                                        {section}
-                                    </p>
-                                )}
+                    {content
+                        .filter((item) => item.type === "image" && item.id === "image01")
+                        .map((item) => (
+                            <div key={item.id} className="profile-image-container">
+                                <img
+                                    id="profile-image-top"
+                                    src={item.imageURL}
+                                    alt="profile image one of two"
+                                />
                             </div>
-                        </div>
-                    )
-                    )}
+                        ))
+                    }
+                    <div className="about-me-content-container-top">
+                        <h1 className="about-me-headline-top">
+                            Hi! I'm Alfonso, and I love developing stuff!
+                        </h1>
+                        {content
+                            .filter((item) => item.type === "paragraph" && item.id === "paragraph01")
+                            .map((item) => (
+                                <div key={item.id}>
+                                    <p className="about-me-body-text">
+                                        {item.paragraph01}
+                                    </p>
+                                </div>
+                            ))
+                            .filter((item) => item.type === "paragraph" && item.id === "paragraph02")
+                            .map((item) => (
+                                <div key={item.id}>
+                                    <p className="about-me-body-text">
+                                        {item.paragraph02}
+                                    </p>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
+
                 <div className="personal-docs-container">
                     {doc.map((item) => (
                         <a
@@ -77,7 +87,7 @@ function AboutMePage() {
                         </a>
                     ))}
                 </div>
-                <div className="about-me-container-bottom">
+                {/*                <div className="about-me-container-bottom">
                     {content.bottomContent.map((item) => item.type === "paragraph" ? (
                         <div className="about-me-content-container-bottom">
                             <h1 className="about-me-headline-bottom">
@@ -87,7 +97,7 @@ function AboutMePage() {
                                 key={item.id}>
                                 {item.content.split(/\s{4}/).map((section, index) =>
                                     <p
-                                        key={index}
+                                        key={item.id + "-" + index}
                                         className="about-me-body-text">
                                         {section}
                                     </p>
@@ -99,6 +109,7 @@ function AboutMePage() {
                             key={item.id}
                             className="profile-image-container">
                             <img
+                                key={item.id}
                                 id="profile-image-bottom"
                                 src={item.imageURL}
                                 alt="profile image two of two"
@@ -106,7 +117,7 @@ function AboutMePage() {
                         </div>
                     )
                     )}
-                </div>
+                    </div> */}
             </div>
         </>
     );

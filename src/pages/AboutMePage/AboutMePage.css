@@ -7,6 +7,14 @@
     color: white;
 }
 
+#hr-bar {
+    height: 1px;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
 .about-me-headline-top,
 .about-me-headline-bottom {
     color: white;
