@@ -20,7 +20,6 @@ function ContactForm() {
                 .then((response) => {
                     setFormSent(true);
                     setLoading(false);
-                    alert("Thank you! Your message has been sent.");
                     form.reset();
                 })
                 .catch((error) => {
@@ -38,54 +37,60 @@ function ContactForm() {
 
     return (
         <>
-            <form
-                className="contact-form"
-                method="post"
-                action=""
-                ref={formRef}
-                name="contact-form"
-            >
-                <fieldset className="contact-fieldset">
-                    <div className="form-section">
-                        <label htmlFor="form-name">Name</label>
-                        <br />
+            {!formSent ? (
+                <form
+                    className="contact-form"
+                    method="post"
+                    action=""
+                    ref={formRef}
+                    name="contact-form"
+                >
+                    <fieldset className="contact-fieldset">
+                        <div className="form-section">
+                            <label htmlFor="form-name">Name</label>
+                            <br />
+                            <input
+                                type="name"
+                                id="form-name"
+                                name="sender-name"
+                                placeholder="Your Name"
+                                required
+                            />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="form-email">Email</label>
+                            <br />
+                            <input
+                                type="email"
+                                id="form-email"
+                                name="sender-email"
+                                placeholder="Your Email"
+                                required
+                            />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="form-message">Message</label>
+                            <br />
+                            <textarea
+                                id="form-message"
+                                name="message"
+                                placeholder="Send me a message!"
+                                required
+                            >
+                            </textarea>
+                        </div>
                         <input
-                            type="name"
-                            id="form-name"
-                            name="sender-name"
-                            placeholder="Your Name"
-                            required
-                        />
-                    </div>
-                    <div className="form-section">
-                        <label htmlFor="form-email">Email</label>
-                        <br />
-                        <input
-                            type="email"
-                            id="form-email"
-                            name="sender-email"
-                            placeholder="Your Email"
-                            required
-                        />
-                    </div>
-                    <div className="form-section">
-                        <label htmlFor="form-message">Message</label>
-                        <br />
-                        <textarea
-                            id="form-message"
-                            name="message"
-                            placeholder="Send me a message!"
-                            required
-                        >
-                        </textarea>
-                    </div>
-                    <input
-                        type="submit"
-                        name="submit"
-                        value="S e n d"
-                        className="submit-btn" />
-                </fieldset>
-            </form>
+                            type="submit"
+                            name="submit"
+                            value="S e n d"
+                            className="submit-btn" />
+                    </fieldset>
+                </form>
+            ) : (
+                <div
+                    className="form-sent-message">Thank you! Your message has been sent.
+                </div>
+            )}
             {loading && <Loading />}
         </>
     );

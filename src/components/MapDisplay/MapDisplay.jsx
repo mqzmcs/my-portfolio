@@ -12,6 +12,7 @@ function MapDisplay() {
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
+                title="Google Maps Málaga"
             ></iframe>
         </div>
     );
