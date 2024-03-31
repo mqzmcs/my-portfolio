@@ -6,44 +6,53 @@ function AboutMePage() {
     const [image, setImage] = useState([]);
     const [paragraph, setParagraph] = useState([]);
     const [doc, setDoc] = useState([]);
+    const [isDataFetched, setIsDataFetched] = useState(false);
     const backendAPI = process.env.REACT_APP_BACKEND_API;
 
-    const getImage = useCallback(async () => {
+    console.log("API", backendAPI);
+
+    const fetchImage = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}images`);
             setImage(response.data);
+            console.log("IMAGE RESPONSE", response);
         } catch (error) {
             console.log(error);
         }
     }, [backendAPI]);
 
-    const getParagraph = useCallback(async () => {
+    const fetchParagraph = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}profile`);
             setParagraph(response.data);
+            console.log("PARA RESPONSE", response);
         } catch (error) {
             console.log(error);
         }
     }, [backendAPI]);
 
-    const getDoc = useCallback(async () => {
+    const fetchDoc = useCallback(async () => {
         try {
             const response = await axios.get(`${backendAPI}docs`);
             setDoc(response.data);
+            console.log("DOC RESPONSE", response);
         } catch (error) {
             console.log(error);
         }
     }, [backendAPI]);
 
-    console.log("IMAGE", image);
-    console.log("PARA", paragraph);
-    console.log("DOC", doc);
+    console.log("setImage", image);
+    console.log("setParagraph", paragraph);
+    console.log("setDoc", doc);
 
     useEffect(() => {
-        getImage();
-        getParagraph();
-        getDoc();
-    }, [getImage, getParagraph, getDoc]);
+        if (!isDataFetched) {
+            fetchImage();
+            fetchParagraph();
+            fetchDoc();
+            setIsDataFetched(true);
+        }
+    }, [isDataFetched, fetchImage, fetchParagraph, fetchDoc]);
 
     return (
         <>
