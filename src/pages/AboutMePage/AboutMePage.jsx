@@ -48,17 +48,17 @@ function AboutMePage() {
                 <div id="hr-bar"></div>
 
                 <div className="about-me-container-top">
-                    {image.map((image) => {
-                        if (image.id === "image01") {
+                    {image.map((img) => {
+                        if (img.id === "image01") {
                             return (
                                 <div
-                                    key={image.id}
+                                    key={img.id}
                                     className="profile-image-container"
                                 >
                                     <img
                                         id="profile-image-top"
-                                        src={image.imageURL}
-                                        alt={image.imageAlt}
+                                        src={img.imageURL}
+                                        alt={img.imageAlt}
                                     />
                                 </div>
                             );
@@ -70,12 +70,12 @@ function AboutMePage() {
                         <h1 className="about-me-headline-top">
                             Hi! I'm Alfonso, and I love developing stuff!
                         </h1>
-                        {paragraph.map((paragraph) => {
-                            if (paragraph.id !== "paragraph03") {
+                        {paragraph.map((para) => {
+                            if (para.id !== "paragraph03") {
                                 return (
-                                    <div key={paragraph.id}>
+                                    <div key={para.id}>
                                         <p className="about-me-body-text">
-                                            {paragraph.content}
+                                            {para.content}
                                         </p>
                                     </div>
                                 );
@@ -106,12 +106,12 @@ function AboutMePage() {
                         <h1 className="about-me-headline-bottom">
                             ...and creating digital solutions!
                         </h1>
-                        {paragraph.map((paragraph) => {
-                            if (paragraph.id === "paragraph03") {
+                        {paragraph.map((para) => {
+                            if (para.id === "paragraph03") {
                                 return (
-                                    <div key={paragraph.id}>
+                                    <div key={para.id}>
                                         <p className="about-me-body-text">
-                                            {paragraph.content}
+                                            {para.content}
                                         </p>
                                     </div>
                                 );
@@ -120,17 +120,17 @@ function AboutMePage() {
                             }
                         })}
                     </div>
-                    {image.map((image) => {
-                        if (image.id === "image02") {
+                    {image.map((img) => {
+                        if (img.id === "image02") {
                             return (
                                 <div
-                                    key={image.id}
+                                    key={img.id}
                                     className="profile-image-container"
                                 >
                                     <img
                                         id="profile-image-bottom"
-                                        src={image.imageURL}
-                                        alt={image.imageAlt}
+                                        src={img.imageURL}
+                                        alt={img.imageAlt}
                                     />
                                 </div>
                             );
