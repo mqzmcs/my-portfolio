@@ -2,7 +2,6 @@
 
 /*
 fonts: "Oswald", "Lexend Deca", "Lato", "Roboto", "Madimi One", "Josefin Sans", "Ojuju", "Montserrat"
-
 font-family: "Oswald", "Lexend Deca", "Lato", "Roboto", Arial, sans-serif;
 */
 
@@ -37,17 +36,11 @@ font-family: "Oswald", "Lexend Deca", "Lato", "Roboto", Arial, sans-serif;
   --bright-0: #F2C94C;
   --bright-1: #CC2936;
 
-  --grad-1:
-    linear-gradient(
-      var(--light-0),
-      var(--light-1),
-      var(--dark-3),
-      var(--dark-2),
-      var(--dark-0)
-      );
-
   background-color: var(--dark-0);
   color: var(--light-1);
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey-1) transparent;
 }
 
 html,
