@@ -43,7 +43,6 @@ function AboutMePage() {
                                 <img
                                     id="profile-image-top"
                                     src={item.imageURL}
-                                    alt="A profile image of Alfonso"
                                 />
                             </div>
                         ))
