@@ -43,6 +43,7 @@ function AboutMePage() {
                                 <img
                                     id="profile-image-top"
                                     src={item.imageURL}
+                                    alt=""
                                 />
                             </div>
                         ))
@@ -111,7 +112,7 @@ function AboutMePage() {
                                 key={item.id}
                                 id="profile-image-bottom"
                                 src={item.imageURL}
-                                alt="An image representing hobbies"
+                                alt=""
                             />
                         </div>
                     )
