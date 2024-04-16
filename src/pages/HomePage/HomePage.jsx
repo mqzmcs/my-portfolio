@@ -90,7 +90,7 @@ function HomePage() {
       <div className="flash-container">
         <span
           id="title-flash"
-          style={{ visibility: flashVisible.title ? "visible" : "hidden" }}><div id="flash-bar"></div> developer
+          style={{ visibility: flashVisible.title ? "visible" : "hidden" }}><div id="flash-bar"></div> full-stack and front-end dev
         </span>
         <span
           id="profile-flash"
