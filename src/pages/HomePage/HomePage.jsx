@@ -90,7 +90,7 @@ function HomePage() {
       <div className="flash-container">
         <span
           id="title-flash"
-          style={{ visibility: flashVisible.title ? "visible" : "hidden" }}><div id="flash-bar"></div> full-stack dev, front-end focus
+          style={{ visibility: flashVisible.title ? "visible" : "hidden" }}><div id="flash-bar"></div> web developer
         </span>
         <span
           id="profile-flash"
@@ -120,6 +120,11 @@ function HomePage() {
           id="discord-flash"
           style={{ visibility: flashVisible.discord ? "visible" : "hidden" }}><div id="flash-bar"></div> hang out with me on Discord
         </span>
+      </div>
+
+      {/*delete after migration*/}
+      <div>
+        <p className="under-construction">Currently migrating the back end</p>
       </div>
 
       <div className="homepage-nav-container">
